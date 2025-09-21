@@ -4,9 +4,9 @@ import os
 import json
 from multiprocessing import Pool, cpu_count
 
-from datagen_customer import main as datagen_customers
-from datagen_transaction import main as datagen_transactions
-from datagen_transaction import valid_date
+from .datagen_customer import main as datagen_customers
+from .datagen_transaction import main as datagen_transactions
+from .datagen_transaction import valid_date
 
 
 if __name__ == '__main__':

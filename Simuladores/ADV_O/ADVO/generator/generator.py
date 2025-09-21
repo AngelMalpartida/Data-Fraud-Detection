@@ -125,7 +125,7 @@ class Generator():
 
         transactions_df = self.get_transactions_df().merge(self.get_terminals_df(), left_on='TERMINAL_ID', right_on='TERMINAL_ID', how='left')
         transactions_df['TX_DATETIME'] =  datetime.strptime(start_date, '%Y-%m-%d') +pd.to_timedelta(transactions_df['TX_DAY'], unit='d') + pd.to_timedelta(transactions_df['TX_TIME'], unit='s')
-        transactions_df.to_csv('utils/'+filename, index=False)
+        transactions_df.to_csv('./Simuladores/ADV_O/ADVO/utils/'+filename, index=False)
         return transactions_df
 
     def get_terminals_df(self, decimals=2) -> pd.DataFrame:

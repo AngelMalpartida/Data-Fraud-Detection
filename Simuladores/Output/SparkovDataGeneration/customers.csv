@@ -1,0 +1,401 @@
+ssn|cc_num|first|last|gender|street|city|state|zip|lat|long|city_pop|job|dob|acct_num|profile
+115-04-4507|4218196001337|Kathy|Johnson|F|863 Lawrence Valleys|Crystal Lake|IL|60012|42.2662|-88.3213|59670|Accounting technician|1953-10-03|888022315787|adults_50up_female_urban.json
+715-55-5575|4351161559407816183|Elaine|Fuller|F|310 Kendra Common Apt. 164|Zanesfield|OH|43360|40.3211|-83.6405|1593|Professor Emeritus|1956-06-07|917558277935|adults_50up_female_rural.json
+167-48-5821|4192832764832|Michael|Cameron|M|05641 Robin Port|Durham|NH|03824|43.1174|-70.9197|14638|International aid/development worker|1993-05-30|718172762479|adults_2550_male_urban.json
+406-83-7518|4238849696532874|Brandon|Williams|M|26916 Carlson Mountain|Gaithersburg|MD|20877|39.1419|-77.189|135332|Seismic interpreter|1955-12-26|947268892251|adults_50up_male_urban.json
+697-93-1877|4514627048281480|Lee|Hernandez|M|809 Burns Creek|Milwaukee|WI|53228|42.9676|-88.0434|817312|Medical laboratory scientific officer|2000-05-22|888335239225|adults_2550_male_urban.json
+246-08-3947|3517182278248964|Vincent|Hickman|M|465 Lam Mission|Chicago|IL|60647|41.9209|-87.7043|2680484|Community arts worker|1968-06-18|245877882397|adults_50up_male_urban.json
+347-03-9639|213193010310510|Kayla|Ramirez|F|82997 Kristen Valley Suite 311|Reidsville|NC|27320|36.3432|-79.6642|39351|Plant breeder/geneticist|1987-03-06|465378164447|adults_2550_female_urban.json
+479-94-0888|4065133387262473|Danielle|Leblanc|F|108 Tanya Terrace Apt. 267|Los Angeles|CA|90044|33.9551|-118.2901|2383912|Quarry manager|1974-12-27|950105810049|adults_50up_female_urban.json
+061-22-6210|630447468723|Colton|Robinson|M|805 Brendan Neck|Paris|TX|75462|33.6805|-95.4905|34942|Retail buyer|1972-08-23|940251608167|adults_50up_male_urban.json
+162-08-8321|2222913619399092|Bradley|Sandoval|M|3534 Anderson Rue Suite 751|Corning|NY|14830|42.1383|-77.0475|19850|Acupuncturist|1995-01-26|684868121383|adults_2550_male_urban.json
+103-10-8809|4251354278496|William|Roman|M|841 Joseph Coves|House Springs|MO|63051|38.4131|-90.5575|14495|Surgeon|1980-02-26|297020387114|adults_2550_male_urban.json
+620-27-5618|4874016400529|Mandy|Green|F|680 Charles Spurs Apt. 805|East Stroudsburg|PA|18301|41.0367|-75.1735|45923|Television floor manager|1987-08-02|161286867170|adults_2550_female_urban.json
+131-06-5051|345331586923222|Stanley|Johnson|M|3421 Brennan Walks Suite 337|Greensboro|NC|27405|36.1214|-79.7733|305168|Maintenance engineer|1989-08-16|903253916954|adults_2550_male_urban.json
+229-04-3165|6541458685014295|Victor|Baker|M|655 Obrien Pass|San Luis Obispo|CA|93405|35.2901|-120.6817|63473|Commercial art gallery manager|1957-09-29|989496879843|adults_50up_male_urban.json
+195-33-0728|3508835615951480|Eric|Ortiz|M|482 Robert Light Apt. 994|Glenside|PA|19038|40.1096|-75.155|31595|Optician, dispensing|1971-08-14|917181406434|adults_50up_male_urban.json
+312-37-3444|6577738721489511|Robert|Potter|M|32003 Carr Trafficway Apt. 769|Houston|TX|77076|29.858|-95.3834|2906700|Engineer, broadcasting (operations)|2005-01-06|767589450881|young_adults_male_urban.json
+507-52-3998|4163287083172781|Victoria|Larson|F|868 Merritt Summit Suite 743|Epsom|NH|03234|43.2174|-71.3546|4572|Health and safety inspector|1952-01-23|857987636625|adults_50up_female_urban.json
+497-81-3920|4143455812236231660|Erin|Owens|F|66909 Woods Knoll|Old Town|ME|04468|44.943|-68.675|9521|Hydrogeologist|1949-09-26|428437913341|adults_50up_female_urban.json
+552-96-8948|3573467065627293|Joseph|Meadows|M|62720 Gray Forest|Watertown|WI|53094|43.193|-88.7185|31134|Programme researcher, broadcasting/film/video|1963-04-04|370770979513|adults_50up_male_urban.json
+285-97-6907|4708053100330923275|Michael|Elliott|M|4529 Kimberly Estates|Mission Viejo|CA|92691|33.6128|-117.6622|94804|Insurance risk surveyor|1938-11-24|636119440405|adults_50up_male_urban.json
+320-74-6150|6011193149190586|Jessica|Wood|F|67165 Zimmerman Mews Apt. 849|Fresno|CA|93730|36.8878|-119.7589|570271|Solicitor|1986-11-15|531608037091|adults_2550_female_urban.json
+447-94-9708|4314737996507527356|Robert|Peterson|M|083 John Lodge Suite 837|Mathews|VA|23109|37.4383|-76.3544|1821|Recycling officer|1969-10-26|869508288813|adults_50up_male_rural.json
+096-38-3631|6011495788568554|Michael|Nelson|M|13518 James Streets Suite 498|Lakeland|FL|33805|28.072|-81.9609|237282|Therapist, speech and language|1964-08-02|915259790398|adults_50up_male_urban.json
+304-30-5913|4082400842710944|Julie|Alexander|F|47116 Jones Roads|Whitehouse|TX|75791|32.222|-95.2266|13125|Astronomer|2006-08-09|163860419795|young_adults_female_urban.json
+312-11-4067|2706999386774968|Eric|Oliver|M|34123 Andrea Estate|Algonquin|IL|60102|42.1641|-88.3064|32193|Accountant, chartered|2005-02-24|495675808653|young_adults_male_urban.json
+609-61-4772|564471349360|Brian|Walker|M|2102 Larson Views|Estero|FL|33928|26.4351|-81.8102|20830|Teacher, adult education|1983-06-16|317489104406|adults_2550_male_urban.json
+128-60-4983|3548877190659403|Anna|Hayden|F|490 Thomas Run|Fresno|CA|93720|36.8579|-119.7655|570271|Private music teacher|1990-12-10|308877180672|adults_2550_female_urban.json
+600-56-8057|2556551256746807|Jordan|Edwards|F|68087 Brown Path Suite 977|Cherry Hill|NJ|08002|39.9308|-75.0175|71054|Arts development officer|1939-03-05|292932052116|adults_50up_female_urban.json
+135-37-7179|3510932480861310|Joel|Wilson|M|4846 Baird Gardens|Daphne|AL|36526|30.6197|-87.8895|27890|Programmer, multimedia|2001-09-08|161281455424|young_adults_male_urban.json
+196-77-8328|3514658404499723|Jill|Washington|F|867 Kane Square Apt. 963|Middletown|NY|10941|41.4886|-74.345|62197|Paediatric nurse|1993-01-19|348079814698|adults_2550_female_urban.json
+485-91-6247|6011702895171879|Alexis|Thomas|F|74596 Melissa Walk|Boca Raton|FL|33498|26.3907|-80.2161|210202|Social research officer, government|2010-05-03|688554816658|young_adults_female_urban.json
+778-63-8865|676213431619|Paige|Padilla|F|2400 Flynn Hill|Burbank|CA|91505|34.169|-118.3442|106841|Mechanical engineer|1984-06-14|474056332778|adults_2550_female_urban.json
+251-68-6752|3522196937923745|Joe|Estrada|M|8217 Huerta Hills Suite 474|Western Springs|IL|60558|41.8049|-87.8995|12960|Engineer, civil (contracting)|1972-12-14|425199071794|adults_50up_male_urban.json
+110-31-6249|3594406409097438|Lawrence|Gomez|M|421 Kyle Mill|Harrisburg|PA|17110|40.303|-76.8862|165527|Analytical chemist|2005-06-10|401921209060|young_adults_male_urban.json
+135-12-4836|372328588424742|Nicole|Morgan|F|1236 Davis Locks|Des Plaines|IL|60018|42.0155|-87.8687|89789|Administrator, education|1994-12-01|589546360500|adults_2550_female_urban.json
+466-48-4296|3551370985931744|Matthew|Wilson|M|47113 Paul Land|Pittsburgh|PA|15232|40.4525|-79.9319|687276|Sound technician, broadcasting/film/video|1988-03-15|646045230097|adults_2550_male_urban.json
+745-20-6798|4796405377351581|Steven|Newman|M|4317 Elizabeth Row|Hartland|WI|53029|43.1172|-88.3446|20799|Therapist, speech and language|1987-04-03|25645650502|adults_2550_male_urban.json
+806-43-3991|4183933529042288|Danielle|Thompson|F|05395 Grant Center|Pasadena|CA|91107|34.151|-118.0889|153114|Computer games developer|1965-09-20|462747155483|adults_50up_female_urban.json
+117-96-1042|38589178390843|Jimmy|Maynard|M|6617 Jones Common|Beeville|TX|78102|28.4222|-97.7616|27768|IT technical support officer|1968-11-24|161526407509|adults_50up_male_urban.json
+130-36-9591|180069847896112|Sarah|Curtis|F|7365 Ross Stream|Reading|MA|01867|42.528|-71.109|23956|Chief of Staff|1938-03-27|469493820213|adults_50up_female_urban.json
+682-33-6133|4111161528098856|Meagan|Jenkins|F|049 Bell Ports Apt. 273|Greencastle|PA|17225|39.7818|-77.747|18879|Clinical cytogeneticist|1968-08-19|929216664078|adults_50up_female_urban.json
+377-15-4565|3568998094024455|Heather|White|F|612 Christopher Pines|Fort Lauderdale|FL|33305|26.1497|-80.1229|711693|Engineer, structural|1991-12-05|461177243339|adults_2550_female_urban.json
+350-21-6063|4991022901476797641|Cindy|Hunt|F|1497 Williams Locks Apt. 034|East Tawas|MI|48730|44.3008|-83.4776|4716|Engineer, mining|1994-06-08|153619596480|adults_2550_female_urban.json
+297-42-1966|675962268388|Justin|Barnett|M|60607 Michelle Ports Suite 966|Craig|CO|81625|40.5224|-107.5615|12921|Horticultural consultant|2006-09-10|442876297368|young_adults_male_urban.json
+333-22-7539|3516136968164536|Felicia|Jackson|F|835 Luna Viaduct|Chicago|IL|60644|41.8829|-87.7582|2680484|Data scientist|1986-09-16|112683916677|adults_2550_female_urban.json
+263-26-2843|3512779979955279|Barry|Ramos|M|9058 Lance Mission Apt. 054|Egg Harbor Township|NJ|08234|39.3741|-74.6118|42532|Camera operator|2002-12-24|951956593813|young_adults_male_urban.json
+630-77-8308|6598079359782074|Brian|Nolan|M|182 John Mill Suite 889|Lemoore|CA|93245|36.2682|-119.8173|37412|Designer, interior/spatial|2002-01-27|409584822948|young_adults_male_urban.json
+397-53-5544|4515186449251922|Thomas|Collins|M|91486 Li Skyway Apt. 685|Bethel|MN|55005|45.3887|-93.2315|4422|Adult nurse|2002-08-16|340859761513|young_adults_male_urban.json
+220-44-7968|4221418880595|Bonnie|Bennett|F|92706 Rhodes Freeway|Boca Raton|FL|33486|26.3481|-80.1104|210202|Producer, radio|1971-02-18|311860132678|adults_50up_female_urban.json
+767-58-3834|213147359774686|Kelsey|Burch|F|240 Sawyer Plaza|Hopewell|VA|23860|37.2876|-77.295|31970|Civil engineer, contracting|1968-08-07|930768379867|adults_50up_female_urban.json
+872-16-4671|2225782613750601|James|Brooks|M|53051 Moody Dam Apt. 472|Pittsburgh|PA|15232|40.4525|-79.9319|687276|Psychotherapist, child|1988-07-21|676236594141|adults_2550_male_urban.json
+082-03-4194|4898614341033|Jennifer|Bauer|F|17980 Jennifer Highway Suite 095|Ruston|LA|71270|32.5308|-92.6439|32780|Financial adviser|1950-03-06|457717515381|adults_50up_female_urban.json
+681-86-1403|180018888806704|Mark|Zavala|M|051 Allen Shoals Apt. 952|Thomson|IL|61285|41.9816|-90.0844|1631|Armed forces operational officer|1995-05-16|598513567016|adults_2550_male_rural.json
+834-83-2869|4722170430305482|Jennifer|Ochoa|F|0345 Michelle Isle Suite 156|Silver Spring|MD|20902|39.04|-77.0444|282095|Office manager|1994-07-09|484228819436|adults_2550_female_urban.json
+348-24-8130|3558416169284518|Angela|Guerrero|F|9627 West Stream Suite 964|Cumberland|MD|21502|39.5992|-78.8444|44400|Barista|1995-02-26|734761706971|adults_2550_female_urban.json
+416-47-8407|3502970213556906|Larry|Shelton|M|7192 Sanders Run Suite 310|Bellingham|WA|98225|48.749|-122.4887|117728|Electronics engineer|1972-09-09|569079060568|adults_50up_male_urban.json
+576-16-4289|4394731217271551888|Donna|Evans|F|258 David Flats|Irvine|CA|92606|33.6951|-117.8224|212569|Corporate treasurer|1934-03-02|868600167952|adults_50up_female_urban.json
+027-47-9078|3578291146786695|Benjamin|Compton|M|7852 Katrina Curve|Staten Island|NY|10301|40.6316|-74.0927|468730|Police officer|1982-10-22|63858482694|adults_2550_male_urban.json
+531-20-4983|4535841438424981|Brandon|Davidson|M|99590 Christopher Row|Lakewood|OH|44107|41.4847|-81.8018|52244|Technical author|1967-03-23|714101259587|adults_50up_male_urban.json
+786-74-6826|3578447364710276|Jennifer|Marshall|F|255 Hester Curve Suite 881|Asheville|NC|28804|35.6374|-82.5646|120389|Investment banker, operational|2001-03-04|512139364441|young_adults_female_urban.json
+274-58-4062|4046963259532783|John|Koch|M|16873 Brandy Causeway Apt. 479|North Tonawanda|NY|14120|43.0498|-78.851|45100|Psychotherapist, dance movement|2005-03-02|589637799519|young_adults_male_urban.json
+868-14-7061|4565060983584163|Jonathan|Duran|M|912 Phillip Underpass Suite 852|Creswell|OR|97426|43.9058|-123.0284|9716|Engineer, civil (contracting)|1976-04-11|560933307161|adults_2550_male_urban.json
+513-06-0743|503857872983|Charles|Velazquez|M|69495 Erickson Hills Suite 055|San Jose|CA|95126|37.3249|-121.9153|973849|Clinical molecular geneticist|1991-08-28|459475163381|adults_2550_male_urban.json
+316-93-0437|3549930972896237|Andre|Vaughan|M|07562 Vaughn Loop|Englewood|CO|80112|39.5805|-104.9011|99594|Retail banker|1980-11-10|673343378855|adults_2550_male_urban.json
+894-95-1021|3583857865278586|Hector|Ingram|M|733 Grant Fork Suite 437|Cleveland|OH|44103|41.5157|-81.6405|769341|Investment analyst|1952-01-17|384312829345|adults_50up_male_urban.json
+815-93-4481|4986652404157473381|Denise|Hoffman|F|19933 Elizabeth Pines Apt. 301|Huntsville|AL|35805|34.7059|-86.6165|190178|Patent attorney|1982-01-26|787397615467|adults_2550_female_urban.json
+103-88-2253|676126773453|Donna|Brown|F|938 Robin Extensions|Ruston|LA|71272|32.5258|-92.6493|32780|Pensions consultant|2003-01-27|922912214634|young_adults_female_urban.json
+038-51-8117|4004991547887289|John|Lee|M|2742 Jill Turnpike|Ontario|CA|91764|34.0763|-117.6254|166856|Hotel manager|1969-12-24|741172976688|adults_50up_male_urban.json
+180-79-6644|6516122753046370|Paul|Finley|M|904 Schwartz Circle Apt. 742|Smiths Creek|MI|48074|42.9051|-82.5679|9356|Optician, dispensing|1994-07-28|552702477657|adults_2550_male_urban.json
+789-40-1924|4593327279568788|Rebecca|Petersen|F|918 Rice Lake|Lexington|NC|27295|35.8684|-80.315|76998|Careers adviser|1988-12-09|622414826633|adults_2550_female_urban.json
+064-71-8282|4258713971877|Robert|Chavez|M|9087 Cummings Locks Suite 039|San Antonio|TX|78212|29.4388|-98.4935|1595797|Buyer, industrial|1938-10-26|464050986189|adults_50up_male_urban.json
+718-09-8867|502070462267|Jacqueline|Vance|F|6182 Wilson Plain Suite 823|Sparks|NV|89431|39.5473|-119.7556|110014|Accountant, chartered certified|1966-09-21|24722602367|adults_50up_female_urban.json
+475-87-8921|6533752431069037|Daniel|Garcia|M|9030 Gonzales Plains|Billings|MT|59102|45.7813|-108.5727|128125|Engineer, water|1993-02-24|952427834357|adults_2550_male_urban.json
+144-65-4740|4995342836449|Antonio|Fry|M|687 Teresa Row|Pickens|SC|29671|34.9024|-82.7058|18030|Museum/gallery curator|1930-12-02|578900622716|adults_50up_male_urban.json
+714-54-6689|4628733427086681|Kendra|Price|F|51751 Brett Lane Apt. 139|Bronx|NY|10459|40.8247|-73.894|1382480|Surveyor, land/geomatics|1988-11-05|524918088976|adults_2550_female_urban.json
+891-43-4968|563173936383|Frank|Campbell|M|544 Hunt Parks Suite 175|Roselle|NJ|07203|40.653|-74.261|21085|Engineer, electronics|1997-02-08|345189549205|adults_2550_male_urban.json
+047-73-3626|3504899642353692|Sandra|Porter|F|7772 Jackson Stravenue Suite 280|Maspeth|NY|11378|40.7239|-73.8997|34981|Scientist, research (physical sciences)|1970-01-31|919268273279|adults_50up_female_urban.json
+838-86-0795|630423120389|Joy|Brown|F|700 Smith Pines Suite 840|Spanaway|WA|98387|47.0732|-122.3943|43173|Retail buyer|1994-07-12|767996662339|adults_2550_female_urban.json
+441-23-1754|2623398454615676|Karl|Branch|M|1016 Bennett Mountains|New Lenox|IL|60451|41.5067|-87.9631|34063|Banker|1944-12-07|11324746755|adults_50up_male_urban.json
+176-11-8190|6591803397401489|Justin|Johnson|M|39261 Martin Garden Suite 856|Los Angeles|CA|90011|34.0079|-118.2582|2383912|Counselling psychologist|1960-11-30|797529515996|adults_50up_male_urban.json
+513-96-5667|502063159995|Jennifer|Ayala|F|477 Michael Lane|Land O Lakes|FL|34639|28.2258|-82.4547|50437|Podiatrist|1933-09-01|748122047461|adults_50up_female_urban.json
+677-49-1405|3531142626551107|Terri|Wallace|F|21267 Garcia Corners Suite 819|Chatsworth|GA|30705|34.7589|-84.7943|33566|Therapist, sports|2004-12-08|359851424229|young_adults_female_urban.json
+013-38-6780|6011839826224441|Katherine|Brown|F|6471 King Gateway Suite 993|Bradenton|FL|34207|27.4394|-82.5778|216518|Programmer, systems|1958-02-08|146488330909|adults_50up_female_urban.json
+007-51-5444|3557569245937524|Tracey|Novak|F|793 Bennett Viaduct Suite 519|Oceanside|CA|92056|33.1968|-117.2831|188742|Engineer, communications|1954-05-14|199911954718|adults_50up_female_urban.json
+787-71-0441|3537416724342666|Angela|Ewing|F|688 Stephens Turnpike Suite 891|Dayton|OH|45409|39.7238|-84.1854|479994|Clinical embryologist|1985-03-13|273885572142|adults_2550_female_urban.json
+681-46-2726|4965610143888999|Daniel|Brooks|M|982 Cuevas Orchard Apt. 461|Columbia|SC|29204|34.026|-81.0046|333497|Commercial art gallery manager|1973-05-17|157754796139|adults_50up_male_urban.json
+320-44-7461|4571775140102|Samuel|Wong|M|382 Mark Meadow|South Kortright|NY|13842|42.377|-74.7259|695|Psychologist, counselling|1972-11-07|877169140360|adults_50up_male_rural.json
+645-24-3054|4609379660334199|Brian|Wiggins|M|5371 Lambert Overpass|Arlington|TN|38002|35.2752|-89.7295|38927|Secretary, company|1972-10-12|704228248578|adults_50up_male_urban.json
+612-50-6432|3555792499125131|Eric|White|M|669 Bailey Manors|Cleveland|OH|44102|41.4735|-81.7398|769341|Electronics engineer|1993-08-30|697874934613|adults_2550_male_urban.json
+711-83-2839|213174225790506|Kari|Lee|F|876 Perry Ville Suite 721|New Port Richey|FL|34653|28.2444|-82.6986|115083|Systems analyst|1959-04-14|872010906800|adults_50up_female_urban.json
+300-05-4504|4279788191480|Samantha|Richardson|F|783 Garcia Village|Metuchen|NJ|08840|40.5449|-74.3517|16558|Firefighter|1992-07-03|959056357132|adults_2550_female_urban.json
+461-34-5712|2413395962923307|Kelly|Patel|M|4494 Derek Terrace|Valley Springs|SD|57068|43.5773|-96.4956|1512|Paramedic|1974-02-04|68370591034|adults_50up_male_rural.json
+888-84-2079|3532536729466718|Mark|Beard|M|8457 Murphy Alley|Milwaukee|WI|53227|42.9949|-88.0364|817312|Chief Financial Officer|1973-06-08|697753726506|adults_50up_male_urban.json
+715-46-1038|180036374545891|Carlos|Phelps|M|001 Smith Walks Apt. 770|Philadelphia|PA|19137|40.0008|-75.0727|1526206|Phytotherapist|2009-08-06|999389892260|young_adults_male_urban.json
+667-39-2605|4541520643611037125|Linda|Stone|F|05162 Jones Lights Apt. 115|Vidor|TX|77662|30.1502|-94.0008|27035|Mental health nurse|1971-06-27|330201333423|adults_50up_female_urban.json
+392-97-2182|4189092753269739|Angelica|Garcia|F|656 Moody Gateway|Peoria|IL|61615|40.7661|-89.645|142158|Health and safety inspector|1974-08-31|92962937500|adults_50up_female_urban.json
+567-77-9831|3504389836403768|Ashley|Porter|F|055 Paul Villages|Falls Church|VA|22041|38.8502|-77.1448|116155|Teacher, adult education|1988-06-11|401239553647|adults_2550_female_urban.json
+700-23-7718|5191043006848665|Mia|Miller|F|1418 Terri Drives|Miami|FL|33175|25.7341|-80.4068|1737737|Software engineer|2001-08-03|430900111440|young_adults_female_urban.json
+650-98-1084|4303161799042102026|Jon|Reed|M|52410 Roman Groves Apt. 491|Lewisville|TX|75067|33.0198|-96.9925|109212|Research scientist (maths)|1959-12-14|560300808050|adults_50up_male_urban.json
+057-64-9288|4241913800030756|James|Hernandez|M|635 Robert Stravenue|Westbury|NY|11590|40.7557|-73.5723|45768|IT consultant|1981-04-02|907403143513|adults_2550_male_urban.json
+586-48-1957|213123806174457|Brandon|Bryant|M|49493 Richardson Park Apt. 832|Pipe Creek|TX|78063|29.6796|-98.9484|9227|Accounting technician|1966-08-25|450681215698|adults_50up_male_urban.json
+239-70-5676|4506413836702411|Amanda|Hall|F|571 William Route Suite 199|Middleton|MA|01949|42.5942|-71.013|8987|Biomedical engineer|1999-10-24|727717710246|adults_2550_female_urban.json
+243-38-4277|375574313291214|Christopher|Owens|M|85374 Baker Crest Apt. 249|Wilmington|OH|45177|39.4488|-83.8417|22260|Architect|1961-06-12|915751541289|adults_50up_male_urban.json
+152-12-4067|378044206788319|Julia|Lara|F|00323 Watson Roads|Acworth|GA|30101|34.0756|-84.6477|91843|Chartered accountant|2007-02-25|646746156066|young_adults_female_urban.json
+833-10-0358|2237215107029667|Jon|Reyes|M|53244 Stephenson Bypass Apt. 476|Fort Worth|TX|76105|32.7233|-97.269|813980|Statistician|1983-10-21|66481931623|adults_2550_male_urban.json
+287-50-2249|6011838065787597|Kathryn|Price|F|59304 Lindsey Mountains|Broomall|PA|19008|39.9747|-75.3602|20535|Senior tax professional/tax inspector|1990-12-26|843348752593|adults_2550_female_urban.json
+239-21-1641|4480396522393|Emily|Rojas|F|059 Anna Field Suite 842|Springfield|OH|45506|39.9104|-83.8275|101826|Recycling officer|1929-11-14|98947300855|adults_50up_female_urban.json
+239-78-3585|676170593252|Michelle|Sellers|F|02921 Yu Landing Suite 915|Buckley|WA|98321|47.1524|-122.0621|15152|Immigration officer|1982-11-29|147414458291|adults_2550_female_urban.json
+750-56-7983|4289539264422099|Jenna|Gamble|F|95939 Sharon Divide|Columbus|IN|47201|39.2055|-85.9317|67468|Learning disability nurse|1939-05-11|84805603866|adults_50up_female_urban.json
+356-41-2751|4570433154100676|Nicholas|Costa|M|6586 Maria Turnpike Apt. 271|Bloomington|IL|61701|40.4783|-88.9893|84349|Analytical chemist|1946-02-05|22741459331|adults_50up_male_urban.json
+268-14-1216|346218159970624|Lisa|Hamilton|F|53368 Guerrero Hills|Ironton|OH|45638|38.5294|-82.6654|21635|Field seismologist|1940-11-04|51951563323|adults_50up_female_urban.json
+586-71-8044|4506149731032419|John|Wilson|M|7418 Lopez Light Suite 270|Saint Paul|MN|55124|44.7497|-93.2029|753116|General practice doctor|1997-05-14|512989778945|adults_2550_male_urban.json
+232-35-9245|503811586935|Juan|Randall|M|793 Evans Locks Apt. 898|Hockessin|DE|19707|39.776|-75.6889|16483|Teacher, music|1967-12-17|161577842715|adults_50up_male_urban.json
+776-58-2833|4320616329451163|Justin|Arnold|M|709 Rodriguez Drive Apt. 999|Citrus Heights|CA|95610|38.6946|-121.2692|83966|Chiropodist|1990-02-03|119936653222|adults_2550_male_urban.json
+799-13-4688|180064679970242|Jamie|Montgomery|M|65307 Prince Brooks Suite 444|Zavalla|TX|75980|31.1569|-94.3871|2836|Regulatory affairs officer|2001-02-22|768190268997|young_adults_male_urban.json
+101-30-2202|4546913736785082143|Michelle|Powell|F|33030 Williams Lake|New York City|NY|10024|40.7864|-73.9764|1577385|Engineer, civil (contracting)|1938-04-21|404903650217|adults_50up_female_urban.json
+518-51-2030|4357972798552411|Dominique|Hughes|F|333 Joseph Lodge|Tallahassee|FL|32310|30.3991|-84.3298|245317|Scientific laboratory technician|1977-10-18|949273896633|adults_2550_female_urban.json
+010-61-2168|4903494466574378|Elizabeth|Meyer|F|108 Hoffman Ranch Suite 417|Texarkana|TX|75501|33.4113|-94.1774|60677|Bonds trader|1959-03-19|701267155766|adults_50up_female_urban.json
+883-36-4279|4328309652074461|Jennifer|Doyle|F|3875 Bruce Ville|Capistrano Beach|CA|92624|33.46|-117.6632|7248|Surveyor, insurance|1940-01-23|322900519786|adults_50up_female_urban.json
+483-17-4238|3551353465549475|Samuel|Ruiz|M|3816 Gutierrez Ways|Katy|TX|77449|29.8323|-95.736|250975|Dentist|1974-04-27|374522422066|adults_50up_male_urban.json
+584-59-2347|341752500743293|Pamela|Burns|F|96666 Reyes Camp|Aurora|CO|80017|39.6948|-104.7881|389246|Social research officer, government|1968-12-03|804015362037|adults_50up_female_urban.json
+015-42-8701|4033542168940|Christopher|Colon|M|7898 Hamilton Spur Apt. 575|Rochester|NH|03867|43.3092|-71.0558|29816|Emergency planning/management officer|1958-09-10|445869180665|adults_50up_male_urban.json
+234-29-2150|4982150648900|Linda|Williams|F|001 Wallace Crossing|Provo|UT|84604|40.2607|-111.6549|112922|Sports development officer|1974-08-25|520776545528|adults_50up_female_urban.json
+157-27-0153|4184992618914117392|Curtis|Baker|M|6420 Lozano Spurs|Harper Woods|MI|48225|42.4377|-82.9289|14554|Quarry manager|1995-11-18|259117969489|adults_2550_male_urban.json
+014-86-1459|2717218114374471|Amber|Li|F|5561 Melissa Cape|Lawrenceville|GA|30044|33.9418|-84.0706|228867|Acupuncturist|1969-02-04|153983162030|adults_50up_female_urban.json
+663-22-5385|379415521667462|Michael|Mendoza|M|212 Tina Vista Apt. 169|Plano|TX|75075|33.025|-96.7397|278067|Radiation protection practitioner|1951-07-27|626215958920|adults_50up_male_urban.json
+449-24-6222|342771670145088|Randall|Ray|M|588 Ryan Stream|Huntsville|AL|35801|34.7269|-86.5673|190178|Fish farm manager|1982-01-30|380026994241|adults_2550_male_urban.json
+693-83-6306|4028772175354087|Courtney|Schneider|F|17797 Melissa Mission Suite 170|Seaside|CA|93955|36.6217|-121.7935|33359|Civil engineer, contracting|1972-08-01|452704326218|adults_50up_female_urban.json
+571-71-0003|2720948837550370|Evelyn|Saunders|F|571 Katherine Forges Apt. 554|East Burke|VT|05832|44.6078|-71.9357|982|Sports development officer|2002-03-21|410263801993|young_adults_female_rural.json
+109-06-2690|30261493316378|Roger|Lee|M|60917 Barrett Parkways Apt. 708|Houston|TX|77023|29.7242|-95.3178|2906700|Art therapist|1985-11-21|920981907761|adults_2550_male_urban.json
+495-66-2904|3521699586693460|Tracey|Waller|F|26984 Joseph Plaza Apt. 339|Broomfield|CO|80021|39.8854|-105.1139|92337|Horticultural therapist|2004-11-28|380906095118|young_adults_female_urban.json
+136-91-2914|180015879968469|Robert|Mills|M|2003 Christensen Estates|Madison|WI|53705|43.073|-89.4528|272940|Historic buildings inspector/conservation officer|2001-11-16|277813046063|young_adults_male_urban.json
+860-08-4836|4571983863842|Melissa|Williams|F|6580 Julia Flats Suite 359|Louisville|KY|40206|38.2503|-85.7034|736284|Sports coach|1966-12-24|664596582306|adults_50up_female_urban.json
+795-93-3171|4212281606484229407|Gary|Mckinney|M|25909 Henry Ports|Dickinson|TX|77539|29.4585|-95.0345|38806|Statistician|1970-09-07|78847377226|adults_50up_male_urban.json
+326-68-3604|4826886153355546|Daniel|Goodwin|M|015 Allen Row Apt. 056|Highland Park|IL|60035|42.1794|-87.8059|29763|Clothing/textile technologist|2003-01-29|280830198772|young_adults_male_urban.json
+742-37-0405|180088770435813|Tiffany|Jackson|F|133 Houston Ford|Dudley|NC|28333|35.2926|-78.0273|11830|Soil scientist|1980-05-19|772358594412|adults_2550_female_urban.json
+794-56-1182|3507501102481933|Susan|Russell|F|665 Perry Crest Apt. 919|Worcester|MA|01609|42.2826|-71.8277|181315|Armed forces technical officer|1969-03-23|935018168609|adults_50up_female_urban.json
+367-65-1739|4914766072832684246|Megan|Sloan|F|88210 Ashley Lock Apt. 435|Logan|UT|84321|41.747|-111.8226|64183|Engineer, mining|1975-06-21|993909782929|adults_50up_female_urban.json
+872-66-2334|4394312908781417|Danielle|Gonzalez|F|5231 Harvey Fields Suite 775|Missoula|MT|59801|46.8563|-114.0252|90987|Warehouse manager|1969-12-23|337839646089|adults_50up_female_urban.json
+599-20-9267|3556205336452575|Julie|Howard|F|8129 Meagan Walks Apt. 834|Lake Oswego|OR|97034|45.4093|-122.6847|42817|Camera operator|1963-08-05|84728646799|adults_50up_female_urban.json
+870-65-0512|3593084887256395|Morgan|Carter|F|816 Shaw Shore Apt. 928|Woodland|CA|95695|38.6816|-121.8052|59848|Counselling psychologist|1956-08-19|173715194068|adults_50up_female_urban.json
+580-73-2396|3550373145303854|James|Hardin|M|51844 Nicholas Lane|Anchorage|AK|99517|61.1901|-149.9361|242037|Medical secretary|1941-02-04|719783599768|adults_50up_male_urban.json
+530-33-6166|4557790827237|Angela|Schneider|F|22591 Robert Isle|De Leon|TX|76444|32.1087|-98.5489|3635|Clothing/textile technologist|1975-08-25|740802473168|adults_50up_female_urban.json
+491-27-9680|4030299228092023|David|White|M|904 Jay Rest Suite 723|Rochester|NY|14620|43.1317|-77.6062|478127|Paediatric nurse|1959-04-16|157199405309|adults_50up_male_urban.json
+841-99-2980|3525799136621031|Joseph|Blankenship|M|91279 Natalie Place Apt. 172|Saint Augustine|FL|32086|29.8285|-81.3237|109984|Toxicologist|1958-10-28|908554315130|adults_50up_male_urban.json
+794-87-7070|180050863765993|Brent|Anderson|M|14986 Lopez Station Apt. 981|Delta|UT|84624|39.3755|-112.5319|5668|Scientist, product/process development|1931-01-15|412347758641|adults_50up_male_urban.json
+211-89-5176|6512694486959461|Nicole|Gutierrez|F|58874 Lane Trail Suite 213|South Boston|VA|24592|36.6963|-78.9188|13934|Product manager|1978-04-09|772162574642|adults_2550_female_urban.json
+103-28-8329|6589026012796117|Deborah|Wood|F|669 Dawson Ranch|Pittsburgh|PA|15237|40.5488|-80.0474|687276|Barista|1935-07-03|854465343288|adults_50up_female_urban.json
+656-64-7193|568430988390|Christopher|Johnson|M|021 Chan Knoll|Tacoma|WA|98404|47.2113|-122.4126|323239|Nutritional therapist|1979-12-18|645986493050|adults_2550_male_urban.json
+531-02-1125|2704895543937690|Abigail|Thompson|F|184 Arroyo Unions|Syracuse|NY|13208|43.073|-76.1486|229807|Scientific laboratory technician|2004-10-25|283281909609|young_adults_female_urban.json
+833-74-4099|3569735779071412|Janet|Kramer|F|356 Black Branch|Grand Rapids|MI|49505|43.012|-85.6309|375580|General practice doctor|2005-04-20|314598870934|young_adults_female_urban.json
+409-87-5604|2702755394237339|Nancy|Salas|F|33952 David Common|Brigantine|NJ|08203|39.3702|-74.494|9454|Research officer, government|1988-03-01|6931334095|adults_2550_female_urban.json
+044-62-6082|3579472846392088|Rebecca|Mendoza|F|562 Bray Square|Bessemer|AL|35023|33.468|-87.0924|71463|Scientist, marine|1982-06-04|345573371830|adults_2550_female_urban.json
+009-02-3453|6011559428434798|Greg|White|M|65564 White Curve Apt. 143|Staten Island|NY|10304|40.6102|-74.0878|468730|Surveyor, building control|1994-06-14|942454203201|adults_2550_male_urban.json
+201-19-2451|30026728857441|Justin|Bradley|M|20347 Shannon Isle Suite 558|Jacksonville|FL|32246|30.2933|-81.5092|847415|Surveyor, hydrographic|1966-12-16|893060472234|adults_50up_male_urban.json
+353-03-6747|2289399824558773|Steve|James|M|2256 Sweeney Cliffs Apt. 253|Saint Louis|MO|63119|38.5893|-90.3481|927396|Interior and spatial designer|1976-10-07|718620520120|adults_2550_male_urban.json
+728-35-9919|4475987622023410|Christine|Sanders|F|78006 Dalton River|Saint Paul|MN|55125|44.9197|-92.9439|753116|Designer, furniture|1947-11-29|717621652546|adults_50up_female_urban.json
+317-30-4054|3572282005577842|Kimberly|Taylor|F|979 Mills Route|Mount Prospect|IL|60056|42.0624|-87.9377|55219|Social research officer, government|1973-04-06|997762397943|adults_50up_female_urban.json
+494-70-3722|2445642400825475|Joseph|Watts|M|4064 Laura Plaza Suite 368|Ogdensburg|NJ|07439|41.0767|-74.5982|2456|Press sub|1971-10-24|272278386916|adults_50up_male_rural.json
+733-95-6386|6011416389448467|Cole|Jones|M|1797 Graves Overpass|Saint Stephens|AL|36569|31.533|-88.0521|928|Emergency planning/management officer|1939-07-22|18557023491|adults_50up_male_rural.json
+051-69-0363|4442703120735649|Richard|Jimenez|M|0512 Joseph Lock Apt. 872|Charlotte|NC|28269|35.2886|-80.8209|790689|Engineer, agricultural|2003-03-05|927264966457|young_adults_male_urban.json
+837-49-0207|2246730371837644|Taylor|Moore|F|881 Olson Hills|Bay Shore|NY|11706|40.7051|-73.243|62543|Engineer, civil (contracting)|2001-07-04|976505596881|young_adults_female_urban.json
+885-86-3569|2246502491630096|Rachel|Alvarez|F|1327 Gina Junction|Los Angeles|CA|90061|33.9245|-118.2716|2383912|Best boy|1991-10-09|391098756160|adults_2550_female_urban.json
+158-90-8788|5573585730652407|Karina|Kim|F|739 Amy Islands Suite 498|North|VA|23128|37.4401|-76.4238|1045|Designer, multimedia|1979-12-06|580116407639|adults_2550_female_rural.json
+461-38-4315|180070862095937|Erica|Brown|F|87829 Morris Row Suite 118|Indiahoma|OK|73552|34.6242|-98.7349|1612|Broadcast engineer|1985-04-10|915016055940|adults_2550_female_rural.json
+183-05-3311|2531096789940535|Larry|Jones|M|717 Michael Summit|Danville|VA|24540|36.6218|-79.4124|60391|Pathologist|1996-05-31|407257502832|adults_2550_male_urban.json
+060-79-4356|213114138113867|Collin|Fox|M|288 Reese Trafficway|San Diego|CA|92122|32.8577|-117.2115|1241364|Technical author|1965-02-08|740271815861|adults_50up_male_urban.json
+720-86-6998|2223868528975581|Wendy|Nguyen|F|6593 Nicholas Plaza Suite 577|Memphis|TN|38118|35.0514|-89.9265|697385|Occupational psychologist|1998-08-10|794569789978|adults_2550_female_urban.json
+292-77-0268|213140433504880|Kristie|Howe|F|07522 Richardson Prairie|Mabton|WA|98935|46.2121|-120.0151|4190|Fisheries officer|1989-03-06|280173576486|adults_2550_female_urban.json
+095-74-6551|3515727919409615|Penny|Weeks|F|6613 Cynthia Roads Suite 048|Pittsburgh|PA|15201|40.4752|-79.9528|687276|Architectural technologist|1990-03-21|594076940942|adults_2550_female_urban.json
+154-42-8232|3520679981364629|Carlos|Miller|M|641 Shaw Trail|Las Vegas|NV|89135|36.1378|-115.3261|1417793|Conservator, furniture|1983-03-22|149301794538|adults_2550_male_urban.json
+573-26-7994|6011898331465915|Brian|Gutierrez|M|3559 Kayla Extension Suite 979|Elizabeth|NJ|07202|40.6565|-74.2215|124967|Dancer|1963-05-12|49136416256|adults_50up_male_urban.json
+205-88-6125|4103924051477056|Christine|Medina|F|848 Dean Divide|Millers Creek|NC|28651|36.2119|-81.2485|7132|Adult nurse|1957-12-11|641567640429|adults_50up_female_urban.json
+540-06-4186|4439407016451049|Sean|Banks|M|8157 Jacob Parkway|Charlotte|NC|28213|35.2836|-80.7638|790689|Programmer, systems|1933-07-30|24534868377|adults_50up_male_urban.json
+254-68-4996|376205554384041|Shawn|Zamora|M|432 Prince Shoals|Grand Junction|CO|81504|39.0791|-108.4916|103017|Copywriter, advertising|1992-05-09|799240993760|adults_2550_male_urban.json
+534-87-3727|6011926495782328|Lauren|Sutton|F|48262 Lonnie Point|Scottsdale|AZ|85258|33.5647|-111.8931|268597|Site engineer|1993-01-01|794348195155|adults_2550_female_urban.json
+189-41-2385|3556647423122092|Lisa|Obrien|F|330 Miller Tunnel|Janesville|WI|53546|42.6683|-89.0025|72323|Publishing rights manager|1974-01-11|550331711552|adults_50up_female_urban.json
+481-92-6127|4772233060463333|Austin|Ho|M|757 Ronald Trail Apt. 965|Seattle|WA|98126|47.5444|-122.3735|837792|Nurse, mental health|1991-07-29|630254100367|adults_2550_male_urban.json
+550-68-0631|213177038860861|Kelli|Mccoy|F|47644 Jackson Hill|Jerome|PA|15937|40.2084|-78.9873|779|Video editor|1999-03-15|59781790776|adults_2550_female_rural.json
+530-19-7596|4181298266570277|Leslie|Marquez|F|1452 Christopher Squares|Stockbridge|GA|30281|33.5633|-84.2165|66140|Production assistant, television|1969-06-23|397860311539|adults_50up_female_urban.json
+537-91-6293|3568602592222062|Elizabeth|Cross|F|2123 Cindy Glen Apt. 777|Midlothian|VA|23114|37.4815|-77.6419|88279|Speech and language therapist|1986-11-26|7762958252|adults_2550_female_urban.json
+506-31-3554|3576719903849837|Anthony|Hernandez|M|20994 Knapp Causeway Apt. 622|Daly City|CA|94015|37.6787|-122.478|107941|Higher education careers adviser|1993-09-07|728474083546|adults_2550_male_urban.json
+717-77-9377|213179501455617|Olivia|Bridges|F|7214 Rose Pine|Alameda|CA|94501|37.7706|-122.2648|73812|Engineer, manufacturing systems|1990-07-12|230621831621|adults_2550_female_urban.json
+060-14-9362|3579469548995291|Kristine|Stone|F|2934 Aaron Burg Suite 139|Bluefield|WV|24701|37.3327|-81.1601|20786|Patent examiner|1974-10-28|49022933417|adults_50up_female_urban.json
+359-72-3479|676334414486|Krista|Wang|F|556 Marilyn Fields|Erie|PA|16504|42.1108|-80.0521|187498|Lawyer|1990-05-11|372948439863|adults_2550_female_urban.json
+491-61-0583|4727857608495880|Alicia|Ray|F|1240 Terrell Road Apt. 996|Salem|OR|97301|44.949|-123.004|249657|Embryologist, clinical|1956-11-18|127110381193|adults_50up_female_urban.json
+316-91-5153|3546173574384210|James|Johnson|M|78078 James Orchard|Sudbury|MA|01776|42.3837|-71.4282|17659|Scientist, research (physical sciences)|1997-07-27|851736505116|adults_2550_male_urban.json
+147-99-1610|213130768104091|Shane|Cook|M|84094 Manuel Fields|Alpharetta|GA|30004|34.1124|-84.302|165556|Historic buildings inspector/conservation officer|1956-02-20|585303752969|adults_50up_male_urban.json
+792-57-1928|4241098813858542496|Danielle|Jones|F|702 Thomas Spring Apt. 160|Lexington|SC|29072|33.9724|-81.2359|90341|Chartered legal executive (England and Wales)|1967-11-10|431328386041|adults_50up_female_urban.json
+722-77-9712|4954538179217176|Emily|Newman|F|3329 Durham Lock Apt. 557|Lake Charles|LA|70605|30.1693|-93.2218|124276|Ranger/warden|1967-02-02|68849460206|adults_50up_female_urban.json
+116-45-7843|30245992816152|Justin|Jones|M|769 Allen Gardens Apt. 761|Broomfield|CO|80020|39.9245|-105.0609|92337|Librarian, public|1939-03-04|894247573582|adults_50up_male_urban.json
+606-56-7133|3583219719975810|Rodney|Thompson|M|91965 Newman Circle Apt. 329|New Britain|CT|06053|41.6867|-72.7908|73240|Academic librarian|1963-08-13|162165414008|adults_50up_male_urban.json
+153-58-8705|4997335494651909867|Sarah|Phelps|F|8008 Rodriguez Haven|Linden|TN|37096|35.5944|-87.8567|5503|Airline pilot|1940-06-27|473456755696|adults_50up_female_urban.json
+605-51-5213|3566683272386569|Brittany|Bright|F|01027 Proctor Dale|Pittsburgh|PA|15218|40.4237|-79.89|687276|Chartered accountant|1992-11-22|704963993110|adults_2550_female_urban.json
+881-59-9903|6011786876532696|Adrienne|Jimenez|F|846 Johnson Camp|Norfolk|VA|23508|36.8859|-76.3004|242803|Tax inspector|1984-02-24|775169734100|adults_2550_female_urban.json
+116-75-7890|3528478189137180|Robert|Edwards|M|8077 Berry Isle|Glastonbury|CT|06033|41.7073|-72.5727|28762|Pharmacist, community|1955-07-16|880372777813|adults_50up_male_urban.json
+297-22-0579|3594079290490473|Angela|Wagner|F|2944 Smith Creek Apt. 927|Chalmette|LA|70043|29.9466|-89.9611|16760|Merchant navy officer|2009-01-09|192448210387|young_adults_female_urban.json
+802-90-3870|30280512927668|Cynthia|Alexander|F|95041 Gary Locks|Yonkers|NY|10703|40.9518|-73.8852|177756|Publishing copy|1986-11-20|520985404788|adults_2550_female_urban.json
+771-69-3829|6574286047658016|Thomas|Walsh|M|454 Lang Glens Suite 739|Chesapeake|VA|23322|36.6434|-76.242|222272|Engineer, broadcasting (operations)|1951-05-21|371600365664|adults_50up_male_urban.json
+707-24-5133|213101061817531|Molly|King|F|91093 Jean Crest|Davis|CA|95616|38.5538|-121.7418|47032|Chartered legal executive (England and Wales)|1932-01-22|665103348898|adults_50up_female_urban.json
+385-85-9275|4244717465421409|Janet|Cook|F|4271 Krause Flats|Buda|TX|78610|30.0918|-97.8534|23502|Travel agency manager|1965-06-02|194959880423|adults_50up_female_urban.json
+504-14-2358|180039174101196|Nicholas|Waters|M|2006 Hernandez Isle|Fancy Gap|VA|24328|36.664|-80.6908|1726|Nurse, adult|2004-12-17|2468061102|young_adults_male_rural.json
+725-99-8040|36618306719854|Gavin|Turner|M|158 Miller Mount|Essex Junction|VT|05452|44.5035|-73.0906|19710|Horticultural consultant|1955-07-14|221825580025|adults_50up_male_urban.json
+568-06-6295|4461571732030931|Katherine|Brown|F|8700 Brown Turnpike Apt. 613|Gibsonia|PA|15044|40.6252|-79.9443|27049|Scientist, research (medical)|1981-01-03|956395061779|adults_2550_female_urban.json
+153-95-9493|4027079032024|Mackenzie|Conway|F|9291 Danny Ranch|Owings|MD|20736|38.6955|-76.6061|8904|Warden/ranger|1962-04-04|69666828528|adults_50up_female_urban.json
+437-44-6587|349825309251148|Charles|Perry|M|273 Dennis Turnpike Suite 207|Manorville|NY|11949|40.8421|-72.8002|14573|Catering manager|1987-11-23|4322238535|adults_2550_male_urban.json
+092-91-9728|4723248763290927910|Mark|Patton|M|0833 Valerie Court Suite 883|Deckerville|MI|48427|43.5151|-82.7191|2879|Psychologist, forensic|1967-02-07|690503315009|adults_50up_male_urban.json
+214-36-0870|4277220054365|Danielle|Jensen|F|10822 Todd Crescent Apt. 379|Las Vegas|NV|89118|36.0811|-115.2169|1417793|TEFL teacher|1955-06-07|460961541101|adults_50up_female_urban.json
+766-87-5337|4531363631797|Kari|Zamora|F|97265 Stephen Fields|Pinehurst|NC|28374|35.1884|-79.4732|15990|Mechanical engineer|1958-10-05|300542724083|adults_50up_female_urban.json
+344-17-0526|3542177625349290|Taylor|Lane|M|68739 Hood Harbors|Casa Grande|AZ|85122|32.8906|-111.754|62569|Administrator, education|1941-11-17|471286837656|adults_50up_male_urban.json
+894-32-4061|379392906007806|Jeffery|Foster|M|7318 Heather Lodge|Aurora|CO|80016|39.6012|-104.7394|389246|Engineering geologist|1970-01-17|391412017641|adults_50up_male_urban.json
+245-83-1487|675942799072|John|Taylor|M|57016 Schmidt Hill Suite 498|Houston|TX|77017|29.6863|-95.2555|2906700|Teaching laboratory technician|2003-01-23|231045526966|young_adults_male_urban.json
+083-80-5501|3585016579055289|Michele|Castro|F|53817 Karen Trace|Liberty|KY|42539|37.3146|-84.9719|10026|Equality and diversity officer|1941-04-18|387923438251|adults_50up_female_urban.json
+516-88-6930|4155778817884795134|Stephanie|Ellis|F|2411 Joshua Square|Warren|MI|48089|42.4685|-82.9974|134056|Data scientist|1984-02-04|165340472930|adults_2550_female_urban.json
+534-81-0372|4827567043103856958|Mary|Buchanan|F|887 Torres Curve Suite 243|Canton|OH|44718|40.8465|-81.4408|192805|Radio broadcast assistant|1984-12-13|847346136203|adults_2550_female_urban.json
+152-46-4660|30292842222314|Amanda|Stewart|F|4523 Elizabeth Key|Knoxville|TN|37918|36.0501|-83.9226|391389|Data scientist|2003-08-11|491227929210|young_adults_female_urban.json
+167-69-4941|5167275208854741|Tracy|Webster|F|751 Mccullough Dam|Dayton|OH|45417|39.7528|-84.247|479994|Structural engineer|1978-05-15|335509428125|adults_2550_female_urban.json
+412-80-3611|30515093983436|Alison|Ryan|F|186 Tracy Rapids Apt. 562|Almont|MI|48003|42.926|-83.0362|6070|Physiotherapist|1953-11-04|422494343629|adults_50up_female_urban.json
+013-37-5652|377813767426621|Sara|Harper|F|47851 Davis Lodge|Reading|PA|19604|40.3507|-75.9143|213013|Government social research officer|1940-09-07|190758885169|adults_50up_female_urban.json
+474-91-9305|4264870494787301|Rick|Moore|M|714 White Spurs Apt. 014|Oxnard|CA|93033|34.1685|-119.1717|211523|Research officer, government|2002-11-29|657416577242|young_adults_male_urban.json
+371-75-7873|3547158904290251|Joel|Steele|M|04565 Keith Pines Apt. 832|Garland|TX|75044|32.9522|-96.6654|226892|Chief Marketing Officer|1977-05-14|827205386114|adults_2550_male_urban.json
+557-42-5181|4451895202845763|Gerald|Bartlett|M|28338 Robert Club|Winchester|NH|03470|42.7788|-72.344|5033|Commercial horticulturist|2004-09-08|145250832177|young_adults_male_urban.json
+492-45-5105|3527985240132233|Eric|Clark|M|1107 Williams Coves|San Francisco|CA|94108|37.7929|-122.4079|805301|Amenity horticulturist|1933-08-03|724960651796|adults_50up_male_urban.json
+608-08-7686|2250140119393251|Alyssa|Thomas|F|552 William Cliff Apt. 908|Seattle|WA|98121|47.6151|-122.3447|837792|Engineer, water|1970-06-21|213527785060|adults_50up_female_urban.json
+176-97-8801|060413875927|Jeffrey|Rosario|M|6638 Rick Trace|Columbus|MS|39701|33.4109|-88.5047|50547|Interior and spatial designer|1977-08-03|511632032337|adults_2550_male_urban.json
+533-18-8124|378015716479474|Darrell|Russell|M|17520 Powers Locks Suite 811|Hinesville|GA|31313|31.8513|-81.6072|40302|Customer service manager|1961-10-02|439782366510|adults_50up_male_urban.json
+605-14-2765|2283539613674994|Don|Clarke|M|7967 Hernandez Motorway Apt. 147|Mannford|OK|74044|36.0927|-96.3576|7406|Research scientist (medical)|1988-08-25|688186139417|adults_2550_male_urban.json
+031-13-0866|2502695249911872|Ricky|Harris|M|8485 Stephanie Bypass Suite 167|Phoenix|AZ|85041|33.3889|-112.0954|1312922|International aid/development worker|1976-07-30|415979927589|adults_2550_male_urban.json
+471-05-0539|4276246719788976|John|Dickerson|M|4796 Miranda Haven|Pasadena|CA|91104|34.1678|-118.1261|153114|IT sales professional|1994-01-21|30328585053|adults_2550_male_urban.json
+047-17-6004|345616556503339|Matthew|Watkins|M|1520 Johnson Shoals|Middletown|OH|45042|39.5321|-84.3896|79273|Pharmacist, hospital|1977-02-03|565080469383|adults_2550_male_urban.json
+274-03-7696|3556965917135788|Robert|Contreras|M|456 Tyler Vista|Indianapolis|IN|46239|39.7265|-86.0005|910148|Call centre manager|1992-05-01|935617309923|adults_2550_male_urban.json
+220-37-4345|579639191959|Denise|Knight|F|3514 Reynolds Plains Suite 366|Hamburg|NY|14075|42.7334|-78.8389|41937|Food technologist|1994-03-26|565324915175|adults_2550_female_urban.json
+688-98-8972|4829737489690832|Jackson|Hernandez|M|466 Dalton Circles|Cape May Court House|NJ|08210|39.1378|-74.7806|17167|Engineer, electronics|1967-06-03|454604966623|adults_50up_male_urban.json
+844-37-2632|4631230347786603246|Chad|Green|M|820 Casey Centers Apt. 594|Albuquerque|NM|87111|35.1347|-106.5222|641349|Bonds trader|1961-01-30|985295591878|adults_50up_male_urban.json
+688-85-1480|6011319818984716|David|Martinez|M|9636 Drew Extensions Apt. 476|Dyersville|IA|52040|42.4833|-91.1183|5526|Forest/woodland manager|1994-05-13|647951221385|adults_2550_male_urban.json
+503-69-6140|3558673425754094|Andrew|Stevenson|M|348 Parker Squares|Erlanger|KY|41018|39.0082|-84.5977|27345|Medical laboratory scientific officer|1980-11-26|892937260466|adults_2550_male_urban.json
+125-69-3873|36064413432752|Sherry|Wang|F|41776 Love Wells Apt. 248|Clayton|NC|27520|35.6348|-78.451|54573|Brewing technologist|2004-04-25|461072712167|young_adults_female_urban.json
+747-71-5354|30002720634591|Angela|Moore|F|657 Russo Dale|North Fort Myers|FL|33917|26.7357|-81.8435|49442|Gaffer|1981-06-26|752364363524|adults_2550_female_urban.json
+847-42-4617|4652669300893|Lori|Meadows|F|42069 Burke Drive Apt. 529|Maricopa|AZ|85139|32.9576|-112.0534|51612|Commercial/residential surveyor|1976-03-05|786039638224|adults_2550_female_urban.json
+446-99-7434|4133344762639346|Nicholas|Lopez|M|2044 Christine Gateway|Orlando|FL|32811|28.5163|-81.4516|878243|Merchant navy officer|1995-11-21|754122826432|adults_2550_male_urban.json
+470-11-0170|30256366941187|Anthony|Cook|M|5990 Jon River|Seattle|WA|98107|47.6701|-122.3763|837792|Museum/gallery curator|1999-01-08|736134617514|adults_2550_male_urban.json
+136-72-0674|3542875721586240|Audrey|Williams|F|4564 Austin Trace|Charleston|SC|29414|32.8215|-80.0568|195110|Geneticist, molecular|1998-08-14|345817764459|adults_2550_female_urban.json
+169-41-8050|4032032074276178|Amanda|Kelly|F|7121 Davis Ways Suite 228|Oak Park|IL|60304|41.8725|-87.7877|51878|Government social research officer|1953-10-29|981671672588|adults_50up_female_urban.json
+600-28-9561|676192613716|Stacy|Johnson|F|5915 Anthony Mount|Salem|OR|97304|44.9588|-123.0753|249657|Quantity surveyor|1992-07-25|689144920939|adults_2550_female_urban.json
+609-85-0096|349759230450182|Trevor|James|M|2361 Melissa Estates Suite 642|Nashville|TN|37211|36.0725|-86.724|431336|Community arts worker|1972-02-28|538153160157|adults_50up_male_urban.json
+754-40-9888|4158377674996164|Robert|Austin|M|610 Mcpherson Springs Apt. 278|Morning Sun|IA|52640|41.0984|-91.2581|1447|Scientist, water quality|2002-09-17|318188228747|young_adults_male_rural.json
+448-11-7826|4243864908108186611|John|Cortez|M|4918 Daniel Shore Suite 226|Denver|CO|80215|39.7435|-105.1009|990452|Armed forces technical officer|1999-12-06|455624263623|adults_2550_male_urban.json
+305-41-9621|3579452321941682|Alicia|Foster|F|77697 Montgomery Ridges|Nampa|ID|83686|43.5441|-116.566|104532|Media planner|1967-12-19|741700746879|adults_50up_female_urban.json
+692-51-4959|5520310303723681|Connor|Turner|M|76012 Joanne Mills Suite 707|Bronx|NY|10452|40.8376|-73.9216|1382480|Textile designer|1952-06-27|220085418516|adults_50up_male_urban.json
+584-51-0835|341667998407674|Kayla|Hardy|F|08069 Tran Grove Suite 717|Reseda|CA|91335|34.2007|-118.5391|74363|Writer|1936-01-12|712702425539|adults_50up_female_urban.json
+460-90-7148|503843757389|Colleen|Stout|F|724 Moyer Village Suite 729|Seattle|WA|98102|47.6302|-122.321|837792|Engineer, maintenance (IT)|1987-10-19|757127388601|adults_2550_female_urban.json
+089-86-7912|4329716743380054|Stanley|Kelly|M|80156 Christina Crest|Griffin|GA|30224|33.2404|-84.2734|61966|Surveyor, planning and development|1997-06-29|533538428144|adults_2550_male_urban.json
+349-46-0765|180028910771198|Leonard|Garrison|M|081 Crystal Ways|Mercedes|TX|78570|26.1513|-97.9185|32525|Engineer, land|1990-10-09|399049645339|adults_2550_male_urban.json
+746-38-7234|180012552137603|David|Lamb|M|8214 Espinoza Mall Suite 328|Belleville|NJ|07109|40.7946|-74.1631|35897|Pharmacist, community|1953-05-05|252489169043|adults_50up_male_urban.json
+822-55-6774|6585072081155623|Jessica|Long|F|290 Barnes Springs|Gulfport|MS|39507|30.3962|-89.0353|83530|Surgeon|1960-09-10|334464334871|adults_50up_female_urban.json
+761-41-5639|578926738993|Marissa|Terry|F|41085 Hardy Streets Apt. 884|Colorado Springs|CO|80903|38.8388|-104.8145|525713|Engineer, production|1959-07-20|558744405500|adults_50up_female_urban.json
+320-67-5583|4008943468105486|Henry|Williams|M|4907 Bird Valley|Williamsburg|VA|23185|37.2732|-76.7324|85370|Television camera operator|1988-10-10|784113269443|adults_2550_male_urban.json
+682-69-9758|4449268315897|Cheryl|Osborne|F|26611 Roger Curve Suite 371|Brooklyn|NY|11225|40.6628|-73.9546|2504700|Merchant navy officer|1990-05-11|578432547912|adults_2550_female_urban.json
+603-72-8503|6597677622827724|Tracy|Palmer|F|377 Julie Points|Marion|AR|72364|35.2077|-90.1989|15831|Merchant navy officer|1968-09-14|661935059927|adults_50up_female_urban.json
+113-16-6056|3508215454470225|Richard|Fisher|M|3270 Amy Cliff Apt. 679|San Dimas|CA|91773|34.1023|-117.8169|33119|Insurance claims handler|1930-11-26|496351176830|adults_50up_male_urban.json
+801-49-7787|3528777251996633|Stephanie|Morgan|F|741 Jasmine Ports|Palestine|TX|75801|31.7588|-95.6342|39196|Insurance broker|1992-06-30|711079270988|adults_2550_female_urban.json
+660-72-1396|4983780182047|Richard|Sanchez|M|89569 Travis Brooks Suite 626|Lincoln|NE|68512|40.7565|-96.6946|266032|Aeronautical engineer|1976-03-18|583512746771|adults_2550_male_urban.json
+392-33-1492|5482422412462097|Tonya|White|F|6152 Orozco Green|Lodi|CA|95242|38.1308|-121.3345|72565|Mining engineer|1986-10-19|910282144077|adults_2550_female_urban.json
+054-26-3926|3578861405786170|Allen|Schultz|M|8913 Kevin Lodge|West Chicago|IL|60185|41.8886|-88.2022|36527|Product designer|1954-02-12|928073319573|adults_50up_male_urban.json
+513-27-2333|343868700794205|Amy|Weeks|F|465 Brenda Pass Suite 028|Westminster|MD|21157|39.5642|-76.9807|57154|Surveyor, quantity|1951-08-19|326717883990|adults_50up_female_urban.json
+405-90-2015|4639855474355375|Tyler|Murphy|M|097 Rachel Spring|Accomac|VA|23301|37.7159|-75.6803|1831|Early years teacher|2010-01-19|611659877737|young_adults_male_rural.json
+721-63-6436|213118071569563|Christopher|Tate|M|75370 Julia Trace|Stockton|NJ|08559|40.4397|-74.9554|4982|Health visitor|1960-09-12|393888005209|adults_50up_male_urban.json
+093-79-4968|3537504793036143|Laura|Snyder|F|999 Cameron Crossroad|Bronx|NY|10472|40.8295|-73.8716|1382480|Bookseller|1980-07-08|284015153138|adults_2550_female_urban.json
+877-30-8571|3530894870605663|Donald|Frazier|M|5803 Joshua Manor Suite 506|Saint Paul|NE|68873|41.2242|-98.444|3289|Engineer, broadcasting (operations)|1952-05-23|87336896474|adults_50up_male_urban.json
+828-04-3697|3513325411076099|Rebecca|Mcconnell|F|17350 Stone Freeway Apt. 997|Monterey Park|CA|91755|34.048|-118.115|60238|Chief of Staff|1991-06-16|492312124212|adults_2550_female_urban.json
+128-11-0995|630451207041|Lisa|Reynolds|F|080 Horn Locks|Wylie|TX|75098|33.0041|-96.5394|48197|Chief Operating Officer|2005-09-12|827285012637|young_adults_female_urban.json
+239-77-0174|36769915078594|Corey|Garcia|M|392 Kelly Orchard|Cressona|PA|17929|40.6284|-76.195|1606|Web designer|2000-12-27|203773109823|young_adults_male_rural.json
+141-06-0992|4968549822749543|Jacob|Smith|M|38806 Gonzalez Flats|Pompano Beach|FL|33065|26.2729|-80.2603|425636|Engineer, drilling|1961-04-09|76387126423|adults_50up_male_urban.json
+194-86-7795|3595995946521701|Jon|Mora|M|379 John Street|Fort Yukon|AK|99740|65.2264|-151.0251|585|Learning disability nurse|1980-08-15|815216022800|adults_2550_male_rural.json
+211-52-3019|580150812478|Cory|Willis|M|03342 Nicole Stravenue Apt. 583|Fresno|CA|93702|36.74|-119.7532|570271|Editor, magazine features|1983-10-15|22316596654|adults_2550_male_urban.json
+864-34-1658|676326153472|David|Pacheco|M|961 Drew Curve|Tucson|AZ|85745|32.2434|-111.0179|865276|Energy manager|1965-12-28|584938817144|adults_50up_male_urban.json
+712-48-5210|3530993842530429|Sarah|Schmitt|F|17912 Potter Rue Suite 787|Mesa|AZ|85207|33.4321|-111.6426|478404|Editorial assistant|1958-11-13|783066267688|adults_50up_female_urban.json
+539-89-7919|3574969033373636|Eric|Oneal|M|4812 Kenneth Path|Rocky River|OH|44116|41.4694|-81.8512|20268|Management consultant|1978-09-20|640938732280|adults_2550_male_urban.json
+477-66-5512|6576657546027341|Maria|Howard|F|8881 House Courts|Chester Springs|PA|19425|40.0978|-75.6398|13922|Commissioning editor|1949-05-26|395443431480|adults_50up_female_urban.json
+560-26-5469|4444392840449|Samantha|Logan|F|9078 Michelle Forks Apt. 373|Maricopa|AZ|85139|32.9576|-112.0534|51612|Scientist, clinical (histocompatibility and immunogenetics)|1968-04-20|865809587905|adults_50up_female_urban.json
+776-60-7560|345366377805295|Shane|Torres|M|5536 Jennings Lodge|Mesquite|TX|75149|32.7678|-96.6082|163734|Soil scientist|1986-10-20|357769217573|adults_2550_male_urban.json
+024-73-0528|4599996636186379|Ashley|Hudson|F|412 Emily Fall Apt. 970|Fontana|CA|92336|34.1173|-117.4378|221665|Embryologist, clinical|1956-12-21|73869137112|adults_50up_female_urban.json
+291-27-3819|4705802566212867162|Troy|Glenn|M|46729 Matthews Parkway|West Bloomfield|MI|48322|42.5424|-83.3793|66323|Proofreader|1965-02-16|220226342085|adults_50up_male_urban.json
+147-58-1049|6011859777901474|Hannah|Kirby|F|9263 Rachel Street Suite 762|Chattanooga|TN|37421|35.025|-85.1459|198659|Teacher, adult education|1962-04-02|429907045757|adults_50up_female_urban.json
+045-31-2588|4137681511856724388|Andrew|Johnson|M|5636 Alex Crescent Apt. 577|Acworth|GA|30102|34.0707|-84.5894|91843|Psychologist, clinical|1959-10-09|90487389653|adults_50up_male_urban.json
+673-32-7172|4422091241862102|Megan|Hernandez|F|30837 Mary Valleys Apt. 647|Cedar Falls|IA|50613|42.5241|-92.4497|42031|Associate Professor|1979-08-29|6864239738|adults_2550_female_urban.json
+791-49-3306|4331060053134|Tyler|Davis|M|206 Lisa Islands|Winston Salem|NC|27107|36.0403|-80.1933|250944|Surveyor, planning and development|1996-08-27|208850457458|adults_2550_male_urban.json
+213-70-6473|6011331552065065|Daniel|Robinson|M|950 Nicole Loop Suite 971|Twin Falls|ID|83301|42.5565|-114.4693|52010|Software engineer|1980-04-03|935968824759|adults_2550_male_urban.json
+176-33-1553|3562525715099768|Kayla|Harmon|F|09143 Todd River|Story City|IA|50248|42.1835|-93.5988|4420|Cartographer|1962-05-14|150581222763|adults_50up_female_urban.json
+511-38-3310|4303975245086409|Daryl|Quinn|M|38033 Boyd Falls Suite 017|Niles|IL|60714|42.0312|-87.8112|29931|Building control surveyor|1949-09-28|214549341145|adults_50up_male_urban.json
+650-19-3346|4298338167423364|Cassandra|Wright|F|734 Miller Lake Suite 627|Wendell|NC|27591|35.798|-78.3926|19589|Prison officer|1991-10-09|555866252092|adults_2550_female_urban.json
+753-56-2554|30066149828241|Jamie|Torres|F|8971 Taylor Mountains Apt. 230|Santa Monica|CA|90403|34.0287|-118.4924|92043|Administrator, Civil Service|1985-09-25|553456594481|adults_2550_female_urban.json
+743-48-8052|6565674916016922|Cory|Graham|M|587 Horton Run Suite 633|Washington|DC|20011|38.9518|-77.0203|601723|Purchasing manager|1994-11-06|398629342571|adults_2550_male_urban.json
+724-87-0463|3549724399201166|James|Willis|M|362 King Hollow|Morehead|KY|40351|38.199|-83.4436|20329|Restaurant manager, fast food|1966-06-20|588271720953|adults_50up_male_urban.json
+392-76-5046|3511952436402703|Anne|Ayala|F|646 Gregory Ferry Apt. 372|Asheville|NC|28806|35.5808|-82.6078|120389|Retail buyer|1948-05-28|124332789091|adults_50up_female_urban.json
+581-28-3042|4234679121419|Jamie|Hill|F|93771 Bruce Terrace Apt. 901|Stanwood|WA|98292|48.2011|-122.378|20987|Engineer, mining|1998-05-02|869826803572|adults_2550_female_urban.json
+385-78-8521|4759655553566905512|April|Harrell|F|209 Misty Harbors Apt. 579|Austin|TX|78735|30.249|-97.8414|940359|Public relations officer|1995-03-31|453183104890|adults_2550_female_urban.json
+193-01-5279|676350573975|Jennifer|Salazar|F|6716 Lawson Station|Big Pine|CA|93513|37.1679|-118.2916|1763|Customer service manager|1947-06-19|574966665129|adults_50up_female_rural.json
+804-92-8268|503871487271|Troy|Olson|M|32116 Ethan Islands|Orlando|FL|32828|28.5523|-81.1795|878243|Music therapist|1992-06-17|308233949370|adults_2550_male_urban.json
+737-33-7804|4287153991566863|Robert|Walker|M|1115 Julie Crescent|Fowler|MI|48835|42.9941|-84.76|2680|Teacher, primary school|2006-07-01|139018371982|young_adults_male_urban.json
+390-74-0028|4983665528993160877|Ethan|Cabrera|M|77294 Julie Vista Apt. 954|Calvert City|KY|42029|37.0147|-88.3811|6321|Retail buyer|1973-08-30|760167701011|adults_50up_male_urban.json
+281-91-9404|30374605233025|Scott|Luna|M|208 Rogers Springs Suite 566|San Jose|CA|95122|37.3293|-121.8339|973849|Building surveyor|1974-03-14|801130991631|adults_50up_male_urban.json
+290-90-3197|3512590472927743|Steven|Clark|M|059 Erika Walks|Kansas City|MO|64153|39.2627|-94.697|545147|Data scientist|1965-08-18|472372101972|adults_50up_male_urban.json
+862-22-0923|2287201859626305|Barbara|Sanders|F|926 Kimberly Way Suite 475|Chandler|AZ|85224|33.3301|-111.8632|255641|Administrator, arts|2002-02-12|125069449315|young_adults_female_urban.json
+125-63-8352|4999741926769|Edwin|Martinez|M|82606 Brown Villages Apt. 312|Raleigh|NC|27601|35.7727|-78.6324|489514|Tour manager|1964-10-23|200554425137|adults_50up_male_urban.json
+569-58-5150|5229321840118453|Vincent|Jackson|M|40848 Taylor Overpass|Oakland|CA|94606|37.7956|-122.2429|381459|Intelligence analyst|1972-03-07|667232262429|adults_50up_male_urban.json
+523-27-1623|4303243298395429|Monica|Henderson|F|6267 Shirley Springs Suite 283|Woodstock|GA|30189|34.1281|-84.5717|89239|Building services engineer|1968-04-24|805862859182|adults_50up_female_urban.json
+649-90-3157|3598926256609312|Devin|Schmidt|M|51554 Misty Fork Suite 016|Merrick|NY|11566|40.6685|-73.5536|35321|Environmental education officer|1966-03-01|859444442469|adults_50up_male_urban.json
+180-68-5023|3518594849102562|Catherine|Shaffer|F|9240 Diane Divide Suite 940|Willmar|MN|56201|45.1393|-95.0523|23173|Metallurgist|1995-03-14|857737191645|adults_2550_female_urban.json
+695-78-6853|3527578446834148|Jason|Edwards|M|113 Frederick Centers|Monterey Park|CA|91755|34.048|-118.115|60238|Chartered accountant|1960-06-22|316725531904|adults_50up_male_urban.json
+505-02-6947|4778816093068535|Zachary|Guerrero|M|728 Gregory Lakes|Anchorage|AK|99502|61.1661|-149.96|242037|Contracting civil engineer|1976-11-08|388753314711|adults_2550_male_urban.json
+433-64-6212|4153814474430965|Daniel|Torres|M|9705 Christina Isle|Jacksonville|FL|32257|30.1927|-81.605|847415|Hydrogeologist|1955-09-24|117484074773|adults_50up_male_urban.json
+359-93-3051|6501673188261700|Christopher|Douglas|M|6545 Mcclain Plain|Westbury|NY|11590|40.7557|-73.5723|45768|Geophysical data processor|2005-03-05|723438158429|young_adults_male_urban.json
+166-18-5796|3505313402665021|Mary|Vaughan|F|67872 Potter Tunnel Suite 862|Umatilla|OR|97882|45.8998|-119.3553|7760|Clinical molecular geneticist|1936-12-13|120077315263|adults_50up_female_urban.json
+130-20-5639|213130569067448|Katelyn|Hodges|F|282 Juan Crescent|New Baltimore|MI|48047|42.673|-82.7753|56734|General practice doctor|1956-09-19|773069447547|adults_50up_female_urban.json
+683-55-3251|30189239231264|Amanda|Mooney|F|0931 Omar Pine|San Gabriel|CA|91776|34.089|-118.0955|62463|Information officer|1953-06-01|698791861372|adults_50up_female_urban.json
+228-44-6981|30086041454565|Danielle|Jacobson|F|00534 Ramirez Rest|Lenox|GA|31637|31.2664|-83.4481|2848|Chiropractor|1986-11-16|203714196644|adults_2550_female_urban.json
+504-47-5477|4108255598953439611|Stacy|Anderson|F|93371 Shelly River|Columbia|SC|29209|33.9659|-80.9355|333497|Lobbyist|1968-08-01|795863781117|adults_50up_female_urban.json
+780-26-8742|3502368485571614|John|Mills|M|94240 Laura Square|Mullica Hill|NJ|08062|39.7252|-75.2065|15756|Energy manager|1991-02-19|896534545111|adults_2550_male_urban.json
+507-88-8724|213127868669437|Clinton|Moore|M|087 Turner Forges|Bloomington|IN|47404|39.195|-86.5757|126925|Housing manager/officer|1999-07-10|295099706923|adults_2550_male_urban.json
+122-22-3669|676134024246|Shelley|Williams|F|81059 Nguyen Squares|Harker Heights|TX|76548|31.0286|-97.6115|26344|Stage manager|1987-10-14|791408017807|adults_2550_female_urban.json
+419-79-4832|340534240891645|Sheila|Walters|F|3543 Moore Fort|Anaheim|CA|92801|33.8428|-117.9546|354475|Politician's assistant|2000-07-18|160497086732|adults_2550_female_urban.json
+096-64-2974|30223972404224|Ruth|Mcdaniel|F|21637 Garcia Pine|Fairfax|CA|94930|37.9883|-122.5937|8500|Copywriter, advertising|1969-04-18|827755151135|adults_50up_female_urban.json
+618-13-6192|6011100231429004|Tina|Rodriguez|F|132 Malone Mills Apt. 457|Houston|TX|77083|29.6947|-95.6511|2906700|Designer, fashion/clothing|2000-05-26|61176693233|adults_2550_female_urban.json
+709-35-8907|5101841862030362|Janice|Gomez|F|61721 Cristian Haven Suite 195|Chico|CA|95928|39.7224|-121.8113|106193|Commissioning editor|2004-06-29|983911742501|young_adults_female_urban.json
+620-20-2918|6592624945147542|Rita|Dawson|F|22526 Griffith Turnpike|Naoma|WV|25140|37.9154|-81.5214|1012|Purchasing manager|1992-06-22|76513338142|adults_2550_female_rural.json
+592-55-4563|4522655767695234|Janet|Dunn|F|836 Bianca Manor Apt. 135|Youngstown|OH|44505|41.1257|-80.6277|163222|Accountant, chartered|1979-11-07|20833147382|adults_2550_female_urban.json
+572-61-2189|5255247286333024|Autumn|Dominguez|F|0650 Elizabeth Cliffs|Lehigh Acres|FL|33976|26.5952|-81.6849|84918|Publishing rights manager|1993-04-30|656431794367|adults_2550_female_urban.json
+031-19-5985|4310962272847656|Jill|Newman|F|1200 Wesley Branch|Resaca|GA|30735|34.5833|-84.9068|6153|Occupational hygienist|1963-05-19|467432801736|adults_50up_female_urban.json
+897-59-9080|3598436241862364|Lisa|Robinson|F|891 Woods Shoal|Fond Du Lac|WI|54935|43.7742|-88.4352|60763|Ophthalmologist|1955-02-18|420164855200|adults_50up_female_urban.json
+056-48-6951|4111595034282|Brian|Lewis|M|3830 Joseph Port|Bristol|RI|02809|41.6825|-71.2676|22938|Systems analyst|1954-08-10|618668025286|adults_50up_male_urban.json
+047-07-5155|2260546835652150|Jennifer|Figueroa|F|209 Woods Ways|Millville|NJ|08332|39.3673|-75.0293|36768|Applications developer|1960-06-17|177339712408|adults_50up_female_urban.json
+699-60-1291|4332288985725458|Marcus|Bentley|M|633 Susan Port|Wendell|NC|27591|35.798|-78.3926|19589|Research scientist (medical)|1995-02-26|885181618728|adults_2550_male_urban.json
+147-99-5072|213171752421497|Heidi|Davis|F|747 Hines Mills|Glen Ellyn|IL|60137|41.8661|-88.0648|37805|Counselling psychologist|1966-07-04|137180523039|adults_50up_female_urban.json
+500-06-5956|4692758955168740909|Patrick|Sanchez|M|14629 Nash Fork|Gilbert|AZ|85298|33.2522|-111.7022|211167|Network engineer|1967-05-08|510560624736|adults_50up_male_urban.json
+096-45-7633|38112166365154|Grace|Munoz|F|714 Johnson Drives|Devils Lake|ND|58301|48.1132|-98.8616|9864|Psychotherapist, dance movement|1986-10-07|700704646267|adults_2550_female_urban.json
+328-73-0514|3505673030644213|Brenda|Hill|F|7683 White Center|Torrance|CA|90502|33.8286|-118.292|174353|Chief Executive Officer|1947-04-06|991686287359|adults_50up_female_urban.json
+351-97-4865|4567782659608939|Angela|Contreras|F|5027 Victor Island|Uxbridge|MA|01569|42.0744|-71.6329|13569|Clothing/textile technologist|1950-07-31|449571171860|adults_50up_female_urban.json
+534-93-0061|30279103368290|Jamie|Bailey|F|905 Smith Inlet|Miami|FL|33173|25.6992|-80.3618|1737737|Retail buyer|1960-12-09|957000539170|adults_50up_female_urban.json
+717-64-7472|6555868512765286|Linda|Daniels|F|6491 Linda Cove Apt. 096|Whittier|CA|90605|33.9413|-118.0356|189948|Civil Service administrator|1994-03-30|822470796467|adults_2550_female_urban.json
+639-70-1634|4890463378613710|Heather|Leon|F|6053 Adams Shoals Suite 463|Waterloo|NY|13165|42.9045|-76.8755|10741|Accountant, chartered management|1964-07-30|36140245674|adults_50up_female_urban.json
+027-20-6135|180052963863967|Ronald|Solis|M|62658 Samuel Courts Apt. 819|Bay City|MI|48706|43.6088|-83.953|67858|Nurse, children's|1987-07-12|841139412121|adults_2550_male_urban.json
+267-71-2606|341106092098196|James|Newton|M|5233 Lee Ville|Plano|TX|75025|33.0784|-96.7291|278067|Financial trader|2003-05-06|857817980840|young_adults_male_urban.json
+789-34-0848|4209117911244211752|Susan|Clark|F|0617 Jason Manor|Maumee|OH|43537|41.5817|-83.6628|27276|Mining engineer|1978-11-11|347418674161|adults_2550_female_urban.json
+462-21-2946|4299015579980284137|Lisa|Herrera|F|51305 Jeffrey Stream|Middle Village|NY|11379|40.7173|-73.8792|34821|Computer games developer|1975-07-22|301797003309|adults_50up_female_urban.json
+205-12-5711|3577686342346197|Rebecca|Matthews|F|76769 Cabrera Road|Glen Ellyn|IL|60137|41.8661|-88.0648|37805|Clinical cytogeneticist|1982-05-20|423515109958|adults_2550_female_urban.json
+205-73-5783|347208496498560|Allen|White|M|2531 Diane Landing Apt. 510|Pataskala|OH|43062|40.0009|-82.6687|27644|Investment banker, operational|1991-08-10|11546128003|adults_2550_male_urban.json
+337-28-7625|3538164938318499|Theresa|Aguirre|F|665 Gonzalez Causeway|Oregon City|OR|97045|45.3377|-122.57|51359|Research officer, political party|1997-05-22|49386329864|adults_2550_female_urban.json
+432-16-2034|30295963904099|William|Buck|M|60880 Newman Cliff Suite 164|Bronx|NY|10474|40.8139|-73.8841|1382480|Haematologist|2005-05-03|825996040059|young_adults_male_urban.json
+410-11-9117|379064771591038|Amber|Smith|F|6321 Jennifer Valleys|El Paso|TX|79912|31.8383|-106.5364|749635|Merchandiser, retail|1980-10-07|995642772692|adults_2550_female_urban.json
+006-89-0861|4104145964229712525|Nicole|Barron|F|718 Becky Shore Suite 457|Carmel|IN|46032|39.9712|-86.1245|77123|Equities trader|1983-04-16|288157084137|adults_2550_female_urban.json
+729-11-5784|213131170303768|Cole|Garcia|M|885 Erickson Shoal|Olathe|KS|66061|38.8865|-94.8204|130216|Designer, exhibition/display|2003-01-29|557692084425|young_adults_male_urban.json
+134-29-5958|6598363146249120|Joel|Rodriguez|M|07240 Stanley Mission|North Las Vegas|NV|89031|36.2589|-115.1718|214518|Management consultant|1970-08-06|129989670839|adults_50up_male_urban.json
+087-46-7070|4686850745102|Mariah|Dennis|F|43629 Moreno Park Suite 103|Millersburg|OH|44654|40.5567|-81.8324|19679|Clinical psychologist|1962-09-21|125497139516|adults_50up_female_urban.json
+037-74-4362|4814396661340|Kathleen|Jackson|F|4940 Jackson Squares|Leesville|LA|71446|31.1256|-93.1736|34664|Writer|1970-10-22|813796480365|adults_50up_female_urban.json
+874-89-3910|4122572076502411|Carolyn|Wolf|F|579 Tracy Gateway|San Antonio|TX|78228|29.4589|-98.5699|1595797|Public house manager|2006-05-22|47714449557|young_adults_female_urban.json
+581-88-4763|4211457758471|Dawn|Ellis|F|5897 Joseph Path Apt. 263|Herndon|VA|20170|38.9839|-77.3675|87123|Curator|1978-08-04|546994984893|adults_2550_female_urban.json
+251-74-7057|341361487824553|Jeanne|Butler|F|3098 Flowers Crossing Suite 795|Fremont|CA|94536|37.5605|-121.9999|214112|Homeopath|1982-01-19|545496644624|adults_2550_female_urban.json
+151-60-2462|180098247414077|Andrew|Campbell|M|74065 Brendan Dam|Greensburg|PA|15601|40.3074|-79.5424|59483|Maintenance engineer|1968-04-29|313011727974|adults_50up_male_urban.json
+682-99-9188|4423691430753662|Jennifer|Strong|F|9429 Shelton Islands Apt. 342|Rio Grande City|TX|78582|26.3942|-98.8104|40455|Pension scheme manager|1969-01-29|221423962760|adults_50up_female_urban.json
+313-11-4872|3582661287585755|Jeffrey|Fisher|M|0806 Katelyn Ridges Suite 398|Bay|AR|72411|35.7456|-90.5507|2294|Midwife|1974-03-30|679151474133|adults_50up_male_rural.json
+580-38-0878|6011607870104151|Linda|Short|F|501 Jacqueline Path Apt. 872|San Carlos|CA|94070|37.4969|-122.2674|29166|Environmental health practitioner|1978-06-26|742578595436|adults_2550_female_urban.json
+873-20-4930|4079311029181335|Brian|Johnson|M|0146 Mcgrath Viaduct Apt. 849|Lexington|KY|40509|38.0102|-84.4274|296965|Print production planner|1996-10-06|725245230756|adults_2550_male_urban.json
+127-56-2397|4223288377441971|Holly|Hill|F|176 Hernandez Haven Suite 196|Columbia|SC|29203|34.0635|-81.0265|333497|Administrator, arts|1951-12-30|333205873837|adults_50up_female_urban.json
+661-84-7283|582774025883|Christine|Orr|F|122 Rios Port Suite 724|Aptos|CA|95003|36.9797|-121.8902|23974|Immunologist|1991-02-27|433463032839|adults_2550_female_urban.json
+860-83-7926|6592988425995997|Ronald|Jones|M|231 Victor Springs|Kent|WA|98031|47.388|-122.1932|147876|Publishing copy|1997-04-27|834613761882|adults_2550_male_urban.json
+791-94-3877|2227610941017591|Lynn|Johnson|F|1762 James Overpass|Elwood|IN|46036|40.2803|-85.8391|11663|Primary school teacher|1974-11-17|316448246954|adults_50up_female_urban.json
+207-95-2656|6011190130205696|Kimberly|Jones|F|873 Ashley Mountains|Edgewater|MD|21037|38.9149|-76.5424|20618|Restaurant manager, fast food|1964-09-03|392354307922|adults_50up_female_urban.json
+573-18-1101|36619128411738|Amber|Fernandez|F|44651 Tammy Club|Lumberton|TX|77657|30.2818|-94.2191|20003|Social researcher|1949-01-16|264464139737|adults_50up_female_urban.json
+626-65-5116|6011819740056434|Felicia|Hubbard|F|85037 Linda Port|Willard|NC|28478|34.6845|-78.0234|4588|Travel agency manager|1996-08-13|917847786168|adults_2550_female_urban.json
+355-10-6820|3587240107835677|Eric|Horn|M|00389 Fleming Street|Lubbock|TX|79416|33.5924|-101.9367|254282|Adult nurse|1985-03-15|530653929487|adults_2550_male_urban.json
+397-99-6181|3566821719553561|Thomas|Allen|M|036 Vicki Bridge|Staten Island|NY|10312|40.5457|-74.1792|468730|Fisheries officer|1964-10-09|63619726599|adults_50up_male_urban.json
+059-17-7186|4055934296711142|Todd|Harris|M|74584 Alison Grove Suite 881|Dallas|TX|75225|32.8628|-96.7918|1263321|Audiological scientist|1982-08-10|989331266010|adults_2550_male_urban.json
+723-80-7967|4328348315203771070|Sara|Nelson|F|1049 Simpson Wall Suite 670|Conshohocken|PA|19428|40.0825|-75.3044|16580|Environmental manager|1990-12-23|417495431869|adults_2550_female_urban.json
+676-56-8725|676340850954|Tammy|Solomon|F|59660 Angela Stravenue|Modesto|CA|95350|37.6746|-121.0113|255354|Holiday representative|2004-04-10|588144128828|young_adults_female_urban.json
+435-74-9312|180026732044133|Patricia|Phillips|F|94544 David Port Suite 427|Orlando|FL|32828|28.5523|-81.1795|878243|Psychologist, counselling|1959-10-09|481110497017|adults_50up_female_urban.json
+478-05-5878|30360914985173|Christopher|Miranda|M|7232 Monica Shoal Apt. 310|Lehigh Acres|FL|33974|26.5677|-81.5954|84918|Educational psychologist|2003-04-20|556990434553|young_adults_male_urban.json
+594-41-0688|213104405809354|Ashley|Hunter|F|133 Hudson Village|Mio|MI|48647|44.6665|-84.1353|4420|Pathologist|1931-12-24|704681267877|adults_50up_female_urban.json
+897-37-2345|589556574905|Christopher|Williams|M|019 Lindsey Pass|Greenbrier|AR|72058|35.2295|-92.3578|15911|Rural practice surveyor|2006-07-06|639020125593|young_adults_male_urban.json
+353-28-6207|3526113989868187|Rebecca|Lawson|F|4394 Mark Union Suite 375|Palm Bay|FL|32909|27.9694|-80.6473|104966|Commercial art gallery manager|1990-04-02|264969731495|adults_2550_female_urban.json
+751-53-5930|2288815793763921|Tammy|Sanchez|F|929 Flynn Junctions Suite 116|Boulder Creek|CA|95006|37.1547|-122.1365|8979|Pharmacist, community|2006-02-21|631997559540|young_adults_female_urban.json
+648-99-3246|4021648712060212|Carlos|Camacho|M|5268 Jennifer Crest Suite 599|Denver|CO|80232|39.6895|-105.0908|990452|Warehouse manager|1976-10-24|50346377953|adults_2550_male_urban.json
+757-46-7355|6564722981209954|Megan|Chavez|F|2894 Jesse Park Suite 098|Dothan|AL|36303|31.2668|-85.3971|80446|Scientist, water quality|1953-07-05|560836091655|adults_50up_female_urban.json
+293-42-6293|342036849951547|Christopher|Roberts|M|3244 Sandra Shores Suite 213|Fairfield|CT|06824|41.1692|-73.2681|55023|Sub|1957-07-08|561948324082|adults_50up_male_urban.json
+173-04-9805|676183070538|Douglas|Gould|M|782 Phillips Creek Apt. 767|Wheat Ridge|CO|80033|39.774|-105.0962|23969|General practice doctor|1962-09-07|949560849705|adults_50up_male_urban.json
+286-94-1909|343152854781502|Jeffrey|Randolph|M|80032 Wiggins Forges Apt. 472|Blythewood|SC|29016|34.1911|-80.9758|16393|Radio producer|1990-08-27|205359003028|adults_2550_male_urban.json
+509-37-2160|4830617893207|Jason|Baker|M|935 Moreno Falls Suite 347|Denver|CO|80222|39.671|-104.9279|990452|Recruitment consultant|1966-12-16|694911733425|adults_50up_male_urban.json
+613-46-8904|30413146753610|Christopher|Huber|M|6277 Mcdaniel Burgs|Clinton|MS|39056|32.3411|-90.3229|25621|Horticultural therapist|1962-05-06|555201505411|adults_50up_male_urban.json
+872-53-0997|180045667664046|John|Robinson|M|7639 Amanda Tunnel|Yucaipa|CA|92399|34.0282|-117.0489|52606|Clinical molecular geneticist|1977-04-27|672649018684|adults_2550_male_urban.json
+133-78-8844|060406155816|Matthew|Stone|M|328 Heath Forks Suite 255|Houston|TX|77043|29.8052|-95.5607|2906700|Patent attorney|1969-03-21|606516448533|adults_50up_male_urban.json
+255-02-0592|639081867025|Douglas|Johnson|M|41662 Atkins Club|Alpharetta|GA|30022|34.0268|-84.2422|165556|Buyer, retail|1999-12-13|792440834950|adults_2550_male_urban.json
+781-94-6806|501889219637|Sandra|Villarreal|F|8044 Harris Greens Suite 646|Traverse City|MI|49684|44.694|-85.6763|70019|Chief Financial Officer|1972-12-08|615925500452|adults_50up_female_urban.json
+495-37-8737|213160765817395|William|Sanders|M|5791 Cook Valleys|Amarillo|TX|79102|35.1999|-101.8496|220580|Charity officer|1957-06-23|614590016113|adults_50up_male_urban.json
+213-63-9723|4269789307466|Emily|Morgan|F|59960 Vaughn Throughway|Columbia|SC|29229|34.1388|-80.8892|333497|Surveyor, planning and development|1959-10-04|540284104445|adults_50up_female_urban.json
+512-41-3863|377881161620289|Nicole|Martin|F|06728 Taylor Well Suite 604|Parker|CO|80138|39.5102|-104.7216|84861|Commercial/residential surveyor|2000-07-25|791537663426|adults_2550_female_urban.json
+278-67-5282|3592248395894770|Christine|Rivera|F|87056 Edward Cliff|Shannon|MS|38868|34.121|-88.7342|5481|Accountant, chartered public finance|1986-01-09|770138490771|adults_2550_female_urban.json
+205-89-1538|180051097921584|Sophia|Cooper|F|44694 Weber Lodge|Neptune|NJ|07753|40.2096|-74.0714|37554|Forest/woodland manager|1973-05-21|595115445810|adults_50up_female_urban.json
+676-26-1270|3513424912896590|Patricia|Vargas|F|973 Aaron Fort Apt. 192|Miami Beach|FL|33141|25.8486|-80.1446|95666|Customer service manager|1983-10-30|520398932410|adults_2550_female_urban.json
+332-10-0856|4675481386667545|Sara|Stewart|F|324 Mary Points|El Paso|TX|79928|31.6631|-106.1401|749635|Private music teacher|2005-01-04|762314146965|young_adults_female_urban.json
+702-16-9141|6520575639836526|Taylor|Cowan|F|5830 Murphy Land|Lee Center|NY|13363|43.3148|-75.5055|2315|Forensic scientist|1972-07-10|665775741850|adults_50up_female_rural.json

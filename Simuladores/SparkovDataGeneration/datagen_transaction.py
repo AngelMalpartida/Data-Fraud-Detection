@@ -4,11 +4,13 @@ import sys
 from datetime import timedelta, datetime
 from faker import Faker
 import argparse
-from profile_weights import Profile
+#from profile_weights import Profile
+from .profile_weights import Profile
 import json
 import csv
 
-from datagen_customer import headers
+#from datagen_customer import headers
+from .datagen_customer import headers
 
 
 fake = Faker()
@@ -27,7 +29,8 @@ transaction_headers = [
 
 # read this only once / built a map of merchant per category for easy lookup
 merchants = {}
-with open('data/merchants.csv', 'r') as merchants_file:
+#Simuladores/SparkovDataGeneration/
+with open('./Simuladores/SparkovDataGeneration/data/merchants.csv', 'r') as merchants_file:
     csv_reader = csv.reader(merchants_file, delimiter='|')
     # skip header
     csv_reader.__next__()
