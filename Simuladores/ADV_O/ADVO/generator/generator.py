@@ -1,7 +1,8 @@
 import numpy as np 
 import pandas as pd
 from datetime import datetime, timedelta
-from ADVO.generator.entities import Terminal, Customer
+#from ADVO.generator.entities import Terminal, Customer
+from .entities import Terminal, Customer
 import matplotlib.pyplot as plt
 
 from multiprocessing import Pool

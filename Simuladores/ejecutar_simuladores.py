@@ -3,8 +3,9 @@ import subprocess
 import sys
 import os
 
+# La ejecucion se debe hacer con python -m Simuladores.ejecutar_simuladores
 from .ADV_O.ADVO.generator import Generator
-from Fraud_Detection_Handbook.SimulatedDataset import generate_dataset, save_dataset
+from .Fraud_Detection_Handbook.SimulatedDataset import generate_dataset, save_dataset
 
 # Configuración de directorios de salida
 output_dir_adv_o = './Simuladores/Output/ADV-O/'
