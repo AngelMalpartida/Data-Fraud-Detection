@@ -46,7 +46,7 @@ def get_list_terminals_within_radius(customer_profile, x_y_terminals, r):
     return list(np.where(dist_x_y < r)[0])
 
 # Generación de transacciones
-def generate_transactions_table(customer_profile, start_date="2018-04-01", nb_days=10):
+def generate_transactions_table(customer_profile, start_date="2025-01-01", nb_days=10):
     customer_transactions = []
     random.seed(int(customer_profile.CUSTOMER_ID))
     np.random.seed(int(customer_profile.CUSTOMER_ID))
@@ -74,7 +74,7 @@ def generate_transactions_table(customer_profile, start_date="2018-04-01", nb_da
     return customer_transactions
 
 # Generación completa del dataset
-def generate_dataset(n_customers=10000, n_terminals=1000000, nb_days=90, start_date="2018-04-01", r=5):
+def generate_dataset(n_customers=10000, n_terminals=1000000, nb_days=90, start_date="2025-01-01", r=5):
     customer_profiles_table = generate_customer_profiles_table(n_customers, random_state=0)
     terminal_profiles_table = generate_terminal_profiles_table(n_terminals, random_state=1)
     x_y_terminals = terminal_profiles_table[['x_terminal_id', 'y_terminal_id']].values.astype(float)
@@ -89,21 +89,75 @@ def generate_dataset(n_customers=10000, n_terminals=1000000, nb_days=90, start_d
     transactions_df.rename(columns={'index': 'TRANSACTION_ID'}, inplace=True)
     return customer_profiles_table, terminal_profiles_table, transactions_df
 
+
+def add_frauds(customer_profiles_table, terminal_profiles_table, transactions_df):
+    
+    # By default, all transactions are genuine
+    transactions_df['TX_FRAUD']=0
+    transactions_df['TX_FRAUD_SCENARIO']=0
+    
+    # Scenario 1
+    transactions_df.loc[transactions_df.TX_AMOUNT>220, 'TX_FRAUD']=1
+    transactions_df.loc[transactions_df.TX_AMOUNT>220, 'TX_FRAUD_SCENARIO']=1
+    nb_frauds_scenario_1=transactions_df.TX_FRAUD.sum()
+    print("Number of frauds from scenario 1: "+str(nb_frauds_scenario_1))
+    
+    # Scenario 2
+    for day in range(transactions_df.TX_TIME_DAYS.max()):
+        
+        compromised_terminals = terminal_profiles_table.TERMINAL_ID.sample(n=2, random_state=day)
+        
+        compromised_transactions=transactions_df[(transactions_df.TX_TIME_DAYS>=day) & 
+                                                    (transactions_df.TX_TIME_DAYS<day+28) & 
+                                                    (transactions_df.TERMINAL_ID.isin(compromised_terminals))]
+                            
+        transactions_df.loc[compromised_transactions.index,'TX_FRAUD']=1
+        transactions_df.loc[compromised_transactions.index,'TX_FRAUD_SCENARIO']=2
+    
+    nb_frauds_scenario_2=transactions_df.TX_FRAUD.sum()-nb_frauds_scenario_1
+    print("Number of frauds from scenario 2: "+str(nb_frauds_scenario_2))
+    
+    # Scenario 3
+    for day in range(transactions_df.TX_TIME_DAYS.max()):
+        
+        compromised_customers = customer_profiles_table.CUSTOMER_ID.sample(n=3, random_state=day).values
+        
+        compromised_transactions=transactions_df[(transactions_df.TX_TIME_DAYS>=day) & 
+                                                    (transactions_df.TX_TIME_DAYS<day+14) & 
+                                                    (transactions_df.CUSTOMER_ID.isin(compromised_customers))]
+        
+        nb_compromised_transactions=len(compromised_transactions)
+        
+        
+        random.seed(day)
+        index_fauds = random.sample(list(compromised_transactions.index.values),k=int(nb_compromised_transactions/3))
+        
+        transactions_df.loc[index_fauds,'TX_AMOUNT']=transactions_df.loc[index_fauds,'TX_AMOUNT']*5
+        transactions_df.loc[index_fauds,'TX_FRAUD']=1
+        transactions_df.loc[index_fauds,'TX_FRAUD_SCENARIO']=3
+        
+                             
+    nb_frauds_scenario_3=transactions_df.TX_FRAUD.sum()-nb_frauds_scenario_2-nb_frauds_scenario_1
+    print("Number of frauds from scenario 3: "+str(nb_frauds_scenario_3))
+    
+    return transactions_df          
+
+
 # Guardar el dataset
 def save_dataset(transactions_df, output_dir="./Simuladores/Output/Fraud Detection Handbook/"):
     
-    return transactions_df
-    '''start_date = datetime.datetime.strptime("2018-04-01", "%Y-%m-%d")
+    #return transactions_df
+    start_date = datetime.datetime.strptime("2025-01-01", "%Y-%m-%d")
     for day in range(transactions_df.TX_TIME_DAYS.max() + 1):
         transactions_day = transactions_df[transactions_df.TX_TIME_DAYS == day].sort_values('TX_TIME_SECONDS')
         date = start_date + datetime.timedelta(days=day)
         filename_output = date.strftime("%Y-%m-%d") + '.pkl'
-        transactions_day.to_pickle(os.path.join(output_dir, filename_output), protocol=4)'''
+        transactions_day.to_pickle(os.path.join(output_dir, filename_output), protocol=4)
 
 # Ejecución principal
 if __name__ == "__main__":
     customer_profiles_table, terminal_profiles_table, transactions_df = generate_dataset(
-        n_customers=5000, n_terminals=10000, nb_days=183, start_date="2018-04-01", r=5
+        n_customers=5000, n_terminals=10000, nb_days=183, start_date="2025-01-01", r=5
     )
     save_dataset(transactions_df)
     print(transactions_df)

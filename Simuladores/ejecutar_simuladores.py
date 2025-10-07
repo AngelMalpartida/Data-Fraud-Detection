@@ -8,10 +8,10 @@ config_file_path = pathlib.Path(__file__).parent / 'SparkovDataGeneration' / 'pr
 
 # La ejecucion se debe hacer con python -m Simuladores.ejecutar_simuladores
 from .ADV_O.ADVO.generator import Generator
-from .Fraud_Detection_Handbook.SimulatedDataset import generate_dataset, save_dataset
-from .SparkovDataGeneration.datagen_customer import main as datagen_customers
-from .SparkovDataGeneration.datagen_transaction import main as datagen_transactions
-from .SparkovDataGeneration.datagen_transaction import valid_date
+from .Fraud_Detection_Handbook.SimulatedDataset import generate_dataset,add_frauds
+#from .SparkovDataGeneration.datagen_customer import main as datagen_customers
+#from .SparkovDataGeneration.datagen_transaction import main as datagen_transactions
+#from .SparkovDataGeneration.datagen_transaction import valid_date
 
 # Configuración de directorios de salida
 output_dir_adv_o = './Simuladores/Output/ADV-O/'
@@ -44,11 +44,12 @@ def ejecutar_adv_o():
     # Llamar al método generate con los argumentos adecuados
     transactions_df = generator.generate(
         filename='ADVO_df.csv', 
-        nb_days_to_generate=150, 
+        nb_days_to_generate=180, 
         max_days_from_compromission=7, 
-        n_terminals=100, 
-        n_customers=100, 
-        compromission_probability=0.01
+        n_terminals=1000, 
+        n_customers=500, 
+        compromission_probability=0.01,
+        start_date="2025-01-01"
     )
 
     # Guardar el DataFrame generado
@@ -62,8 +63,10 @@ def ejecutar_adv_o():
 def ejecutar_fraud_detection():
     print("Ejecutando simulador Fraud Detection Handbook...")
     customer_profiles_table, terminal_profiles_table, transactions_df = generate_dataset(
-        n_customers=5000, n_terminals=10000, nb_days=183, start_date="2018-04-01", r=5
+        n_customers=500, n_terminals=1000, nb_days=180, start_date="2025-01-01", r=8
     )
+
+    transactions_df=add_frauds(customer_profiles_table,terminal_profiles_table,transactions_df)
 
     # Verificar si la carpeta de salida existe, si no, crearla
     if not os.path.exists(output_dir_fraud_detection):
@@ -74,6 +77,10 @@ def ejecutar_fraud_detection():
 
     # Guardar el DataFrame generado
     transactions_df.to_csv(os.path.join(output_dir_fraud_detection, 'Handbook_df.csv'), index=False)
+    terminal_profiles_table.to_csv(os.path.join(output_dir_fraud_detection, 'terminal_profiles.csv'), index=False)
+    customer_profiles_table.to_csv(os.path.join(output_dir_fraud_detection, 'customer_profile.csv'), index=False)
+
+
 
     print("Simulador Fraud Detection Handbook completado.")
 
@@ -129,9 +136,12 @@ if __name__ == "__main__":
     ejecutar_fraud_detection()
 
     # Ejecutar simulador Sparkov
+    #Para ejecutar en la linea de comandos
+    #Se debe dirigir a su ruta y ejecutar:
+    #python datagen.py -n 500 -o ../Output/SparkovDataGeneration 01-01-2025 06-30-2025
     #ejecutar_sparkov_via_script(
-      #  n_customers=200, 
-     #   output_dir='.Simuladores/Output/Sparkov/', 
-      #  start_date='01-01-2025', 
-     #   end_date='12-31-2025'
+      #  n_customers=200,
+      #  output_dir='.Simuladores/Output/Sparkov/',
+      #  start_date='01-01-2025',
+      #  end_date='12-31-2025'
    # )

@@ -3,7 +3,7 @@ import sys
 from datetime import date
 import random
 #from main_config import MainConfig
-from .main_config import MainConfig
+from main_config import MainConfig
 import argparse
 import pathlib
 from bisect import bisect_left
@@ -32,7 +32,7 @@ headers = [
 def make_cities():
     cities = {}
     #Simuladores/SparkovDataGeneration/
-    with open('./Simuladores/SparkovDataGeneration/demographic_data/locations_partitions.csv', 'r') as f:
+    with open('./demographic_data/locations_partitions.csv', 'r') as f:
         for line in f.readlines()[1:]:
             cdf, output = line.strip().split(',')
             cities[float(cdf)] = output.split('|')
@@ -42,7 +42,7 @@ def make_cities():
 def make_age_gender_dict():
     gender_age = {}
     prev = 0
-    with open('./Simuladores/SparkovDataGeneration/demographic_data/age_gender_demographics.csv', 'r') as f:
+    with open('./demographic_data/age_gender_demographics.csv', 'r') as f:
         for line in f.readlines()[1:]:
             l = line.strip().split(',')
             prev += float(l[3])

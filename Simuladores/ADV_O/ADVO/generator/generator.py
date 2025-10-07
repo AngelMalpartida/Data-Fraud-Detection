@@ -104,7 +104,7 @@ class Generator():
         print("Customer {} transactions generated".format(customer.customer_id), end='\r')
         return customer.transactions
 
-    def generate_transactions(self, nb_days_to_generate=180, start_date="2018-04-01") -> None:
+    def generate_transactions(self, nb_days_to_generate=180, start_date="2025-01-01") -> None:
         self.start_date = start_date
         self.transactions = []
 
@@ -118,7 +118,7 @@ class Generator():
         for result in results:
             self.transactions.extend(result)
 
-    def generate(self, filename='dataset.csv', n_terminals = 100, n_customers=200, radius=20, max_days_from_compromission=3, compromission_probability=0.02, nb_days_to_generate = 180, start_date="2018-04-01"):
+    def generate(self, filename='dataset.csv', n_terminals = 100, n_customers=200, radius=20, max_days_from_compromission=3, compromission_probability=0.02, nb_days_to_generate = 180, start_date="2025-01-01"):
         self.generate_terminals( n_terminals)
         self.generate_customers( n_customers, radius, max_days_from_compromission, compromission_probability)
         self.generate_transactions( nb_days_to_generate, start_date)
