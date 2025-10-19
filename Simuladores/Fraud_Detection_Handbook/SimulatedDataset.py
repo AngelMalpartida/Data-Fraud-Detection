@@ -65,12 +65,6 @@ def combine_profiles(transactions_df, customer_profiles_table, terminal_profiles
     # Optimiza dtypes
     df = optimize_dtypes(df)
 
-    # (Opcional) recorta a ~15 numéricas finales si lo deseas:
-    # features = ["TX_AMOUNT","TX_TIME_SECONDS","TX_TIME_DAYS",
-    #             "x_customer_id","y_customer_id","mean_amount","std_amount","mean_nb_tx_per_day",
-    #             "x_terminal_id","y_terminal_id"]
-    # df = df[["TX_DATETIME","CUSTOMER_ID","TERMINAL_ID"] + features + ["TX_FRAUD","TX_FRAUD_SCENARIO"]]
-
     return df
 
 def add_fraud_scenario_1(df, amount_threshold=220.0, start_day=None, end_day=None):
@@ -164,38 +158,23 @@ def apply_fraud_schedule(df, customer_profiles_table, terminal_profiles_table, s
     return out
 
 
-def write_parquet_partitioned(df, base_path, compression="snappy", partition_cols=("TX_YEAR","TX_MONTH")):
+def write_parquet_by_chunks(df, base_path, freq="MS", compression="snappy"):
+   
     os.makedirs(base_path, exist_ok=True)
-    # Partición por año/mes (y si quieres día) → lectura selectiva y archivos más pequeños
-    df.to_parquet(
-        base_path,
-        engine="pyarrow",
-        compression=compression,
-        partition_cols=list(partition_cols),
-        index=False
+
+    df = df.sort_values(
+        by=["TX_YEAR","TX_MONTH","TX_DAY","TX_TIME_SECONDS"],
+        kind="mergesort"
     )
 
-def write_parquet_by_chunks(df, base_path, freq="MS", compression="snappy"):
-    """
-    Alternativa: cortar por mes y escribir uno a uno para bajar RAM pico.
-    freq="": Month Start.
-    """
-    os.makedirs(base_path, exist_ok=True)
-
-    df = df.sort_values("TX_DATETIME")
-    # Asegúrate de NO guardar columnas pesadas como 'available_terminals'
-    if "available_terminals" in df.columns:
-        df = df.drop(columns=["available_terminals"])
-
-    # Agrupa por año (freq 'YS' = Year Start)
-    for _, g in df.groupby(pd.Grouper(key="TX_DATETIME", freq="YS")):
+    for y, g in df.groupby("TX_YEAR", sort=True):
         if g.empty:
             continue
-        y = int(g["TX_YEAR"].iloc[0])
-        out_dir = os.path.join(base_path, f"TX_YEAR={y}")
+
+        out_dir = os.path.join(base_path, f"TX_YEAR={int(y)}")
         os.makedirs(out_dir, exist_ok=True)
 
-        fn = os.path.join(out_dir, f"transactions_{y}.parquet")
+        fn = os.path.join(out_dir, f"transactions_{int(y)}.parquet")
         g.to_parquet(fn, engine="pyarrow", compression=compression, index=False)
 
         del g
@@ -264,37 +243,153 @@ def generate_transactions_table(customer_profile, start_date="2025-01-01", nb_da
         customer_transactions = customer_transactions[['TX_DATETIME', 'CUSTOMER_ID', 'TERMINAL_ID', 'TX_AMOUNT', 'TX_TIME_SECONDS', 'TX_TIME_DAYS']]
     return customer_transactions
 
+
+def generate_transactions_table_seasonal(customer_profile, start_date="2025-01-01", nb_days=10,
+                                         tx_mult=None, amount_mult=None, amount_noise=None):
+    """
+    Igual a generate_transactions_table, pero aplica factores diarios:
+    - nb_tx ~ Poisson(mean_nb_tx_per_day * tx_mult[day])
+    - TX_AMOUNT *= amount_mult[day] * (1 + Normal(0, amount_noise[day]))
+    """
+    import numpy as np, random, pandas as pd
+
+    if tx_mult is None:       tx_mult = np.ones(nb_days, dtype="float32")
+    if amount_mult is None:   amount_mult = np.ones(nb_days, dtype="float32")
+    if amount_noise is None:  amount_noise = np.zeros(nb_days, dtype="float32")
+
+    customer_transactions = []
+    random.seed(int(customer_profile.CUSTOMER_ID))
+    np.random.seed(int(customer_profile.CUSTOMER_ID))
+
+    for day in range(nb_days):
+        # volumen con estacionalidad
+        lam = max(0.0, float(customer_profile.mean_nb_tx_per_day)) * float(tx_mult[day])
+        nb_tx = np.random.poisson(lam)
+
+        if nb_tx > 0:
+            for _ in range(nb_tx):
+                time_tx = int(np.random.normal(86400 / 2, 20000))
+                if 0 < time_tx < 86400:
+                    amount = np.random.normal(customer_profile.mean_amount, customer_profile.std_amount)
+                    if amount < 0:
+                        amount = np.random.uniform(0, customer_profile.mean_amount * 2)
+
+                    # aplica multiplicador y ruido estacional
+                    mult = float(amount_mult[day])
+                    noise = 1.0 + float(np.random.normal(0.0, amount_noise[day])) if amount_noise[day] > 0 else 1.0
+                    amount = float(np.round(amount * mult * noise, 2))
+
+                    if len(customer_profile.available_terminals) > 0:
+                        terminal_id = random.choice(customer_profile.available_terminals)
+                        customer_transactions.append([
+                            time_tx + day * 86400, day, customer_profile.CUSTOMER_ID, terminal_id, amount
+                        ])
+
+    customer_transactions = pd.DataFrame(customer_transactions, columns=[
+        'TX_TIME_SECONDS', 'TX_TIME_DAYS', 'CUSTOMER_ID', 'TERMINAL_ID', 'TX_AMOUNT'
+    ])
+    if len(customer_transactions) > 0:
+        customer_transactions['TX_DATETIME'] = pd.to_datetime(
+            customer_transactions["TX_TIME_SECONDS"], unit='s', origin=start_date
+        )
+        customer_transactions = customer_transactions[[
+            'TX_DATETIME','CUSTOMER_ID','TERMINAL_ID','TX_AMOUNT','TX_TIME_SECONDS','TX_TIME_DAYS'
+        ]]
+    return customer_transactions
+
+
+def make_seasonality_maps(
+    start_date="2025-01-01", nb_days=365*2,
+    tx_mult_by_month={11: 1.20, 12: 1.35},         # +20% en nov, +35% en dic (volumen)
+    amount_mult_by_month={11: 1.10, 12: 1.25},     # +10% en nov, +25% en dic (monto)
+    amount_std_extra_by_month={11: 0.02, 12: 0.05} # ruido extra (0..0.05 ~= 5%) en dic
+):
+    import pandas as pd, numpy as np
+    dates = pd.date_range(pd.to_datetime(start_date), periods=nb_days, freq="D")
+    months = dates.month.values
+    tx_mult = np.ones(nb_days, dtype="float32")
+    amount_mult = np.ones(nb_days, dtype="float32")
+    amount_noise = np.zeros(nb_days, dtype="float32")
+    for m, v in tx_mult_by_month.items():       tx_mult[months==m] = v
+    for m, v in amount_mult_by_month.items():   amount_mult[months==m] = v
+    for m, v in amount_std_extra_by_month.items(): amount_noise[months==m] = v
+    return tx_mult, amount_mult, amount_noise
+
+
 # Generación completa del dataset
 def generate_dataset(n_customers=10000, n_terminals=1000000, nb_days=90, start_date="2025-01-01", r=5):
-    print(f"Generando perfiles de {n_customers} clientes...")
     customer_profiles_table = generate_customer_profiles_table(n_customers, random_state=0)
-    print("Perfiles de clientes generados.")
-    print(f"Generando perfiles de {n_terminals} terminales...")
     terminal_profiles_table = generate_terminal_profiles_table(n_terminals, random_state=1)
-    print("Perfiles de terminales generados.")
-    print("Calculando terminales disponibles para cada cliente dentro del radio especificado...")
     x_y_terminals = terminal_profiles_table[['x_terminal_id', 'y_terminal_id']].values.astype(float)
     customer_profiles_table['available_terminals'] = customer_profiles_table.apply(
         lambda x: get_list_terminals_within_radius(x, x_y_terminals=x_y_terminals, r=r), axis=1
     )
 
-    print("Terminales disponibles calculados.")
-    print(f"Generando transacciones para {n_customers} clientes durante {nb_days} días...")
+    tx_mult, amount_mult, amount_noise = make_seasonality_maps(start_date=start_date, nb_days=nb_days)
 
-    transactions_df = customer_profiles_table.groupby('CUSTOMER_ID').apply(
-        lambda x: generate_transactions_table(x.iloc[0], nb_days=nb_days)
-    ).reset_index(drop=True)
+    def _gen(g):
+        cp = g.iloc[0]
+        return generate_transactions_table_seasonal(
+            cp, start_date=start_date, nb_days=nb_days,
+            tx_mult=tx_mult, amount_mult=amount_mult, amount_noise=amount_noise
+        )
+    
 
-    print("Ordenando y asignando IDs a las transacciones...")
+    transactions_df = customer_profiles_table.groupby('CUSTOMER_ID', group_keys=False).apply(_gen).reset_index(drop=True)
 
-    print("Transacciones ordenadas y listas.")
-
-    print("Generación del dataset completada.")
     transactions_df = transactions_df.sort_values('TX_DATETIME').reset_index(drop=True)
     transactions_df.reset_index(inplace=True)
     transactions_df.rename(columns={'index': 'TRANSACTION_ID'}, inplace=True)
     return customer_profiles_table, terminal_profiles_table, transactions_df
 
+def _prepare_for_storage_simple(df):
+    """
+    Deja un dataset compacto para modelado y particionado.
+    - Quita IDs y timestamps redundantes.
+    - NO guarda TX_FRAUD_SCENARIO.
+    """
+    df = df.copy()
+
+    # columnas a eliminar si existen
+    drop_cols = [
+        'TRANSACTION_ID', 'CUSTOMER_ID', 'TERMINAL_ID',
+        'TX_DATETIME', 'TX_DATE', 'TX_FRAUD_SCENARIO',
+        'available_terminals'
+    ]
+    df = df.drop(columns=[c for c in drop_cols if c in df.columns], errors='ignore')
+
+    # columnas a conservar (intersección por seguridad)
+    keep_cols = [
+        # particionado / tiempo numérico
+        'TX_YEAR', 'TX_MONTH', 'TX_DAY', 'TX_TIME_DAYS', 'TX_TIME_SECONDS',
+        # variables numéricas principales
+        'TX_AMOUNT',
+        'x_customer_id', 'y_customer_id', 'mean_amount', 'std_amount', 'mean_nb_tx_per_day',
+        'x_terminal_id', 'y_terminal_id',
+        # etiqueta
+        'TX_FRAUD'
+    ]
+    keep_cols = [c for c in keep_cols if c in df.columns]
+    df = df[keep_cols]
+
+    # dtypes ligeros
+    cast_map = {
+        'TX_AMOUNT': 'float32',
+        'TX_TIME_DAYS': 'int32',
+        'TX_TIME_SECONDS': 'int32',
+        'TX_YEAR': 'int16',
+        'TX_MONTH': 'int8',
+        'TX_DAY': 'int8',
+        'x_customer_id': 'float32', 'y_customer_id': 'float32',
+        'mean_amount': 'float32', 'std_amount': 'float32', 'mean_nb_tx_per_day': 'float32',
+        'x_terminal_id': 'float32', 'y_terminal_id': 'float32',
+        'TX_FRAUD': 'int8'
+    }
+    for c, t in cast_map.items():
+        if c in df.columns:
+            df[c] = df[c].astype(t, copy=False)
+
+    return df
 
 def generate_and_save(
     n_customers=100_000, n_terminals=100_000,
@@ -314,27 +409,28 @@ def generate_and_save(
         start_date=start_date,
         r=r
     )
-    # Nota: para 10–20M filas puede convenir generar por bloques desde la función
-    # (si lo necesitas, te paso versión "streaming" que itera por semanas/meses).
+
 
     print(f"Transacciones generadas: {len(tx)}")
     
     full = combine_profiles(tx, cust, term, start_date=start_date)
 
-    # 3) Aplicar fraudes por calendario (opcional)
+  
     if schedule is not None:
         full = apply_fraud_schedule(full, cust, term, schedule)
 
-    # 4) Guardar en Parquet particionado (por mes)
-    # Opción A: escribir todo a la vez (requiere RAM acorde)
-    # write_parquet_partitioned(full, out_base, partition_cols=("TX_YEAR","TX_MONTH"))
+    full = _prepare_for_storage_simple(full)
 
     print("\nEstructura del DataFrame que se guardará:")
     print("Columnas:", full.columns.tolist())
-    print("Primeras 5 filas:")
-    print(full[['CUSTOMER_ID','TX_FRAUD_SCENARIO','TX_DATE', 'TX_DATETIME', 'TX_TIME_SECONDS', 'TX_TIME_DAYS', 'mean_nb_tx_per_day']].head())
-    print(full['TX_FRAUD_SCENARIO'].unique())
-    # Opción B: escribir por chunks mensuales (recomendado para 10–20M)
+    print(full.head())
+
+    transacciones_por_mes = full.groupby('TX_MONTH').size()
+    # Mostrar el resultado
+    print("Transacciones por mes:")
+    print(transacciones_por_mes)
+
+
     write_parquet_by_chunks(full, out_base, freq="MS", compression="snappy")
 
     # Limpieza
@@ -343,7 +439,7 @@ def generate_and_save(
 
 def add_frauds(customer_profiles_table, terminal_profiles_table, transactions_df):
     
-    # By default, all transactions are genuine
+    
     transactions_df['TX_FRAUD']=0
     transactions_df['TX_FRAUD_SCENARIO']=0
     
@@ -394,7 +490,6 @@ def add_frauds(customer_profiles_table, terminal_profiles_table, transactions_df
     return transactions_df          
 
 
-# Guardar el dataset
 def save_dataset(transactions_df, output_dir="./Simuladores/Output/Fraud Detection Handbook/"):
     
     #return transactions_df
@@ -405,7 +500,7 @@ def save_dataset(transactions_df, output_dir="./Simuladores/Output/Fraud Detecti
         filename_output = date.strftime("%Y-%m-%d") + '.pkl'
         transactions_day.to_pickle(os.path.join(output_dir, filename_output), protocol=4)
 
-# Ejecución principal
+
 if __name__ == "__main__":
     customer_profiles_table, terminal_profiles_table, transactions_df = generate_dataset(
         n_customers=5000, n_terminals=10000, nb_days=183, start_date="2025-01-01", r=5

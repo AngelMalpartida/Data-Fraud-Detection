@@ -1,6 +1,7 @@
 # Script para ejecutar funciones específicas de los simuladores
 import subprocess
 import sys
+import pandas as pd
 import os
 import pathlib
 config_file_path = pathlib.Path(__file__).parent / 'SparkovDataGeneration' / 'profiles' / 'main_config.json'
@@ -36,27 +37,52 @@ def instalar_dependencias():
 
 
 schedule_1 = [
-  # Año 1
-  {"scenario":1, "start_day":0,   "end_day":89,  "params":{"amount_threshold":220}},
-  {"scenario":2, "start_day":90,  "end_day":179, "params":{"n_per_day":2, "window_days":28}},
-  {"scenario":3, "start_day":180, "end_day":269, "params":{"n_customers_per_day":3, "window_days":14, "amp_factor":5, "frac_to_flip":1/3}},
-  # overlap S1+S2
-  {"scenario":1, "start_day":270, "end_day":359, "params":{"amount_threshold":200}},  # más agresivo
-  {"scenario":2, "start_day":270, "end_day":359, "params":{"n_per_day":3, "window_days":21}},  # más denso
-  # Año 2 (reapariciones)
-  {"scenario":3, "start_day":360, "end_day":449, "params":{"n_customers_per_day":4, "window_days":14, "amp_factor":5}},
-  {"scenario":1, "start_day":450, "end_day":539, "params":{"amount_threshold":230}},  # umbral más alto = menos fraudes
-  # overlap S2+S3
-  {"scenario":2, "start_day":540, "end_day":629, "params":{"n_per_day":2, "window_days":28}},
-  {"scenario":3, "start_day":540, "end_day":629, "params":{"n_customers_per_day":2, "window_days":10, "amp_factor":4}},
-  # fase baja
-  {"scenario":1, "start_day":630, "end_day":729, "params":{"amount_threshold":260}},  # muy pocos S1
+  # ======================
+  # PRETRAIN (Meses 1–4): S1 + S2 simultáneos
+  # ======================
+  {"scenario": 1, "start_day":   0, "end_day": 119, "params": {"amount_threshold": 220}},          # S1
+  {"scenario": 2, "start_day":   0, "end_day": 119, "params": {"n_per_day": 2, "window_days": 21}},# S2
+
+  # ======================
+  # Bimestres (S1 → S2 → S3) hasta 24 meses
+  # ======================
+
+  # Bloque 1 (May–Jun 2025): S1
+  {"scenario": 1, "start_day": 120, "end_day": 180, "params": {"amount_threshold": 225}},
+
+  # Bloque 2 (Jul–Ago 2025): S2
+  {"scenario": 2, "start_day": 181, "end_day": 242, "params": {"n_per_day": 2, "window_days": 28}},
+
+  # Bloque 3 (Sep–Oct 2025): S3
+  {"scenario": 3, "start_day": 243, "end_day": 303, "params": {"n_customers_per_day": 3, "window_days": 14, "amp_factor": 5, "frac_to_flip": 1/3}},
+
+  # Bloque 4 (Nov–Dic 2025, NAVIDAD): S1 suavizado
+  {"scenario": 1, "start_day": 304, "end_day": 364, "params": {"amount_threshold": 250}},  # umbral más alto → menos S1
+
+  # Bloque 5 (Ene–Feb 2026): S2
+  {"scenario": 2, "start_day": 365, "end_day": 423, "params": {"n_per_day": 2, "window_days": 28}},
+
+  # Bloque 6 (Mar–Abr 2026): S3
+  {"scenario": 3, "start_day": 424, "end_day": 484, "params": {"n_customers_per_day": 3, "window_days": 14, "amp_factor": 5, "frac_to_flip": 1/3}},
+
+  # Bloque 7 (May–Jun 2026): S1
+  {"scenario": 1, "start_day": 485, "end_day": 545, "params": {"amount_threshold": 225}},
+
+  # Bloque 8 (Jul–Ago 2026): S2
+  {"scenario": 2, "start_day": 546, "end_day": 607, "params": {"n_per_day": 2, "window_days": 28}},
+
+  # Bloque 9 (Sep–Oct 2026): S3
+  {"scenario": 3, "start_day": 608, "end_day": 668, "params": {"n_customers_per_day": 3, "window_days": 14, "amp_factor": 5, "frac_to_flip": 1/3}},
+
+  # Bloque 10 (Nov–Dic 2026, NAVIDAD): S1 suavizado
+  {"scenario": 1, "start_day": 669, "end_day": 729, "params": {"amount_threshold": 250}}
 ]
+
 
 
 def crear_handbook_dataset():
     generate_and_save(
-    n_customers=2000, n_terminals=2000,
+    n_customers=1500, n_terminals=1500,
     start_date="2025-01-01", nb_days=365*2, r=8,
     out_base = os.path.join(os.environ['USERPROFILE'], 'Downloads', 'fraud_stream_parquet'),
     schedule=schedule_1,  # lista de escenarios (ver arriba)
@@ -169,9 +195,4 @@ if __name__ == "__main__":
     #Para ejecutar en la linea de comandos
     #Se debe dirigir a su ruta y ejecutar:
     #python datagen.py -n 500 -o ../Output/SparkovDataGeneration 01-01-2025 06-30-2025
-    #ejecutar_sparkov_via_script(
-      #  n_customers=200,
-      #  output_dir='.Simuladores/Output/Sparkov/',
-      #  start_date='01-01-2025',
-      #  end_date='12-31-2025'
-   # )
+    
