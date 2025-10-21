@@ -35,49 +35,83 @@ def instalar_dependencias():
     #subprocess.run(['pip', 'install', '-r', 'Simuladores/Fraud_Detection_Handbook/requirements.txt'], check=True)
 
 
+schedule_ym = [
+  # ======================
+  # PRETRAIN (Ene–Abr 2025): S1 + S2 simultáneos
+  # ======================
+  {"scenario": 1, "start": {"year": 2025, "month": 1}, "end": {"year": 2025, "month": 4},
+   "params": {"amount_threshold": 140}},
+  {"scenario": 2, "start": {"year": 2025, "month": 1}, "end": {"year": 2025, "month": 1},
+   "params": {"n_per_day": 4, "window_days": 21}},
+   {"scenario": 2, "start": {"year": 2025, "month": 2}, "end": {"year": 2025, "month": 2},
+   "params": {"n_per_day": 4, "window_days": 21}},
+   {"scenario": 2, "start": {"year": 2025, "month": 3}, "end": {"year": 2025, "month": 3},
+   "params": {"n_per_day": 4, "window_days": 21}},
+   {"scenario": 2, "start": {"year": 2025, "month": 4}, "end": {"year": 2025, "month": 4},
+   "params": {"n_per_day": 4, "window_days": 21}},
 
-schedule_1 = [
-  # ======================
-  # PRETRAIN (Meses 1–4): S1 + S2 simultáneos
-  # ======================
-  {"scenario": 1, "start_day":   0, "end_day": 119, "params": {"amount_threshold": 220}},          # S1
-  {"scenario": 2, "start_day":   0, "end_day": 119, "params": {"n_per_day": 2, "window_days": 21}},# S2
 
   # ======================
   # Bimestres (S1 → S2 → S3) hasta 24 meses
   # ======================
 
   # Bloque 1 (May–Jun 2025): S1
-  {"scenario": 1, "start_day": 120, "end_day": 180, "params": {"amount_threshold": 225}},
+  {"scenario": 1, "start": {"year": 2025, "month": 5}, "end": {"year": 2025, "month": 6},
+   "params": {"amount_threshold": 130}},
 
   # Bloque 2 (Jul–Ago 2025): S2
-  {"scenario": 2, "start_day": 181, "end_day": 242, "params": {"n_per_day": 2, "window_days": 28}},
+  {"scenario": 2, "start": {"year": 2025, "month": 7}, "end": {"year": 2025, "month": 7},
+   "params": {"n_per_day": 4, "window_days": 21}},
 
-  # Bloque 3 (Sep–Oct 2025): S3
-  {"scenario": 3, "start_day": 243, "end_day": 303, "params": {"n_customers_per_day": 3, "window_days": 14, "amp_factor": 5, "frac_to_flip": 1/3}},
+  # Bloque 2 (Jul–Ago 2025): S2
+  {"scenario": 2, "start": {"year": 2025, "month": 8}, "end": {"year": 2025, "month": 8},
+   "params": {"n_per_day": 4, "window_days": 21}},
 
-  # Bloque 4 (Nov–Dic 2025, NAVIDAD): S1 suavizado
-  {"scenario": 1, "start_day": 304, "end_day": 364, "params": {"amount_threshold": 250}},  # umbral más alto → menos S1
+  # Bloque 3 (Sep 2025): S3 (más suave)
+  {"scenario": 3, "start": {"year": 2025, "month": 9}, "end": {"year": 2025, "month": 9},
+   "params": {"n_customers_per_day": 15, "window_days": 30, "amp_factor": 6, "frac_to_flip": 1/3}},
+  # Bloque 3 (Oct 2025): S3 (más intenso)
+  {"scenario": 3, "start": {"year": 2025, "month": 10}, "end": {"year": 2025, "month": 10},
+   "params": {"n_customers_per_day": 15, "window_days": 30, "amp_factor": 6, "frac_to_flip": 1/3}},
+
+  # Bloque 4 (Nov–Dic 2025, NAVIDAD): S1 “suavizado”
+  {"scenario": 1, "start": {"year": 2025, "month": 11}, "end": {"year": 2025, "month": 11},
+   "params": {"amount_threshold": 150}},
+  {"scenario": 1, "start": {"year": 2025, "month": 12}, "end": {"year": 2025, "month": 12},
+   "params": {"amount_threshold": 180}},
 
   # Bloque 5 (Ene–Feb 2026): S2
-  {"scenario": 2, "start_day": 365, "end_day": 423, "params": {"n_per_day": 2, "window_days": 28}},
+  {"scenario": 2, "start": {"year": 2026, "month": 1}, "end": {"year": 2026, "month": 2},
+   "params": {"n_per_day": 4, "window_days": 21}},
 
   # Bloque 6 (Mar–Abr 2026): S3
-  {"scenario": 3, "start_day": 424, "end_day": 484, "params": {"n_customers_per_day": 3, "window_days": 14, "amp_factor": 5, "frac_to_flip": 1/3}},
+  {"scenario": 3, "start": {"year": 2026, "month": 3}, "end": {"year": 2026, "month": 4},
+   "params": {"n_customers_per_day": 4, "window_days": 14, "amp_factor": 5, "frac_to_flip": 1/3}},
 
   # Bloque 7 (May–Jun 2026): S1
-  {"scenario": 1, "start_day": 485, "end_day": 545, "params": {"amount_threshold": 225}},
+  {"scenario": 1, "start": {"year": 2026, "month": 5}, "end": {"year": 2026, "month": 6},
+   "params": {"amount_threshold": 130}},
 
   # Bloque 8 (Jul–Ago 2026): S2
-  {"scenario": 2, "start_day": 546, "end_day": 607, "params": {"n_per_day": 2, "window_days": 28}},
+  {"scenario": 2, "start": {"year": 2026, "month": 7}, "end": {"year": 2026, "month": 7},
+   "params": {"n_per_day": 4, "window_days": 28}},
+   # Bloque 8 (Jul–Ago 2026): S2
+  {"scenario": 2, "start": {"year": 2026, "month": 8}, "end": {"year": 2026, "month": 8},
+   "params": {"n_per_day": 4, "window_days": 28}},
 
   # Bloque 9 (Sep–Oct 2026): S3
-  {"scenario": 3, "start_day": 608, "end_day": 668, "params": {"n_customers_per_day": 3, "window_days": 14, "amp_factor": 5, "frac_to_flip": 1/3}},
+  {"scenario": 3, "start": {"year": 2026, "month": 9}, "end": {"year": 2026, "month": 9},
+   "params": {"n_customers_per_day": 15, "window_days": 30, "amp_factor": 6, "frac_to_flip": 1/3}},
+  # Bloque 9 (Oct 2026): S3 (más intenso)
+  {"scenario": 3, "start": {"year": 2026, "month": 10}, "end": {"year": 2026, "month": 10},
+   "params": {"n_customers_per_day": 15, "window_days": 30, "amp_factor": 6, "frac_to_flip": 1/3}},
 
-  # Bloque 10 (Nov–Dic 2026, NAVIDAD): S1 suavizado
-  {"scenario": 1, "start_day": 669, "end_day": 729, "params": {"amount_threshold": 250}}
+  # Bloque 10 (Nov–Dic 2026, NAVIDAD): S1 “suavizado”
+  {"scenario": 1, "start": {"year": 2026, "month": 11}, "end": {"year": 2026, "month": 11},
+   "params": {"amount_threshold": 150}},
+  {"scenario": 1, "start": {"year": 2026, "month": 12}, "end": {"year": 2026, "month": 12},
+   "params": {"amount_threshold": 180}},   # puedes subir a 180 en dic si quieres aún más “suavizado”
 ]
-
 
 
 def crear_handbook_dataset():
@@ -85,7 +119,7 @@ def crear_handbook_dataset():
     n_customers=1500, n_terminals=1500,
     start_date="2025-01-01", nb_days=365*2, r=8,
     out_base = os.path.join(os.environ['USERPROFILE'], 'Downloads', 'fraud_stream_parquet'),
-    schedule=schedule_1,  # lista de escenarios (ver arriba)
+    schedule=schedule_ym,  # lista de escenarios (ver arriba)
     chunk_days=30   # generar/aplicar/guardar por mes
     )
    

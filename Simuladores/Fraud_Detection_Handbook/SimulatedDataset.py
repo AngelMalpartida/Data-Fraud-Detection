@@ -20,6 +20,28 @@ DTYPES = {
     "TX_AMOUNT": "float32",
     # Se agregarán más abajo tras el merge
 }
+def _ym_index(y, m):
+    # índice total ordenable por (año, mes)
+    return int(y) * 12 + int(m)
+
+
+def month_range_mask(df, start=None, end=None):
+    """
+    Devuelve:
+      mask_month: máscara booleana por (TX_YEAR, TX_MONTH) en [start..end] inclusive
+      day_min, day_max: min y max de TX_TIME_DAYS dentro de ese rango (o None si vacío)
+    start/end: dicts {"year":YYYY, "month":MM} o None.
+    """
+    ym = df["TX_YEAR"] * 12 + df["TX_MONTH"]
+    sidx = -10**9 if start is None else _ym_index(start["year"], start["month"])
+    eidx =  10**9 if end   is None else _ym_index(end["year"],   end["month"])
+    mask = (ym >= sidx) & (ym <= eidx)
+    if mask.any():
+        dmin = int(df.loc[mask, "TX_TIME_DAYS"].min())
+        dmax = int(df.loc[mask, "TX_TIME_DAYS"].max())
+    else:
+        dmin, dmax = None, None
+    return mask, dmin, dmax
 
 def add_time_columns(df, start_date="2025-01-01"):
     df = df.copy()
@@ -67,67 +89,106 @@ def combine_profiles(transactions_df, customer_profiles_table, terminal_profiles
 
     return df
 
-def add_fraud_scenario_1(df, amount_threshold=220.0, start_day=None, end_day=None):
+def add_fraud_scenario_1(df, amount_threshold=220.0,
+                         start=None, end=None,   # dicts {"year":..,"month":..}
+                         start_day=None, end_day=None):
     """
-    Regla simple por monto. Aplica solo entre start_day y end_day (inclusive).
+    Regla simple por monto. Ahora limitado por (año, mes) o por días.
     """
     df = df.copy()
-    mask_range = pd.Series(True, index=df.index)
-    if start_day is not None: mask_range &= df["TX_TIME_DAYS"] >= start_day
-    if end_day   is not None: mask_range &= df["TX_TIME_DAYS"] <= end_day
+    if start is not None or end is not None:
+        mask_month, _, _ = month_range_mask(df, start, end)
+    else:
+        mask_month = pd.Series(True, index=df.index)
 
-    mask = mask_range & (df["TX_AMOUNT"] > amount_threshold)
+    # (si te pasan day-range explícito, lo intersectas)
+    mask_day = pd.Series(True, index=df.index)
+    if start_day is not None: mask_day &= df["TX_TIME_DAYS"] >= int(start_day)
+    if end_day   is not None: mask_day &= df["TX_TIME_DAYS"] <= int(end_day)
+
+    mask = mask_month & mask_day & (df["TX_AMOUNT"] > float(amount_threshold))
     df.loc[mask, "TX_FRAUD"] = 1
     df.loc[mask, "TX_FRAUD_SCENARIO"] = 1
     return df
 
-def add_fraud_scenario_2(df, terminal_profiles_table, n_per_day=2, window_days=28, start_day=None, end_day=None, seed=0):
-    """
-    Terminals comprometidos por 'ventanas' deslizantes. Selección estable por día (semilla).
-    """
+def add_fraud_scenario_2(df, terminal_profiles_table,
+                         n_per_day=2, window_days=28, seed=0,
+                         start=None, end=None,
+                         start_day=None, end_day=None):
     df = df.copy()
-    max_day = int(df["TX_TIME_DAYS"].max())
-    start = 0 if start_day is None else int(start_day)
-    end   = max_day if end_day is None else int(end_day)
+    if start is not None or end is not None:
+        mask_month, dmin, dmax = month_range_mask(df, start, end)
+        if dmin is None:
+            return df
+        day_list = np.sort(df.loc[mask_month, "TX_TIME_DAYS"].unique())
+    else:
+        dmin = 0 if start_day is None else int(start_day)
+        dmax = int(df["TX_TIME_DAYS"].max()) if end_day is None else int(end_day)
+        day_list = np.arange(dmin, dmax+1)
 
-    rng = np.random.RandomState(seed)
     term_ids = terminal_profiles_table["TERMINAL_ID"].values
 
-    for day in range(start, end+1):
-        rng_day = np.random.RandomState(day)  # reproducible por día
-        compromised = rng_day.choice(term_ids, size=min(n_per_day, len(term_ids)), replace=False)
-        mask = (df["TX_TIME_DAYS"]>=day) & (df["TX_TIME_DAYS"]<day+window_days) & (df["TERMINAL_ID"].isin(compromised))
+    for day_np in day_list:
+        day = int(day_np)                           # <-- clave
+        rng_day = np.random.RandomState(day)        # ok con int nativo
+        k = min(int(n_per_day), len(term_ids))
+        if k <= 0:
+            continue
+        compromised = rng_day.choice(term_ids, size=k, replace=False)
+        mask = (
+            (df["TX_TIME_DAYS"] >= day) &
+            (df["TX_TIME_DAYS"] < day + int(window_days)) &
+            (df["TERMINAL_ID"].isin(compromised))
+        )
+        if start is not None or end is not None:
+            mask &= mask_month
         df.loc[mask, "TX_FRAUD"] = 1
         df.loc[mask, "TX_FRAUD_SCENARIO"] = 2
     return df
 
-def add_fraud_scenario_3(df, customer_profiles_table, n_customers_per_day=3, window_days=14,
-                          amp_factor=5.0, frac_to_flip=1/3, start_day=None, end_day=None, seed=0):
-    """
-    Clientes comprometidos: amplifica montos y etiqueta una fracción como fraude.
-    """
+
+def add_fraud_scenario_3(df, customer_profiles_table,
+                         n_customers_per_day=3, window_days=14,
+                         amp_factor=5.0, frac_to_flip=1/3, seed=0,
+                         start=None, end=None,
+                         start_day=None, end_day=None):
     df = df.copy()
-    max_day = int(df["TX_TIME_DAYS"].max())
-    start = 0 if start_day is None else int(start_day)
-    end   = max_day if end_day is None else int(end_day)
+    if start is not None or end is not None:
+        mask_month, dmin, dmax = month_range_mask(df, start, end)
+        if dmin is None:
+            return df
+        day_list = np.sort(df.loc[mask_month, "TX_TIME_DAYS"].unique())
+    else:
+        dmin = 0 if start_day is None else int(start_day)
+        dmax = int(df["TX_TIME_DAYS"].max()) if end_day is None else int(end_day)
+        day_list = np.arange(dmin, dmax+1)
+        mask_month = pd.Series(True, index=df.index)
 
     cust_ids = customer_profiles_table["CUSTOMER_ID"].values
+    seed = int(seed)                                # <-- por si viene no-int
 
-    for day in range(start, end+1):
-        rng_day = random.Random(day + seed)
-        compromised = rng_day.sample(list(cust_ids), k=min(n_customers_per_day, len(cust_ids)))
+    for day_np in day_list:
+        day = int(day_np)                           # <-- clave
+        rng_day = random.Random(day + seed)         # ahora sí: int nativo
+        k = min(int(n_customers_per_day), len(cust_ids))
+        if k <= 0:
+            continue
+        compromised = rng_day.sample(list(cust_ids), k=k)
 
-        mask = (df["TX_TIME_DAYS"]>=day) & (df["TX_TIME_DAYS"]<day+window_days) & (df["CUSTOMER_ID"].isin(compromised))
-        idxs = df.index[mask]
-        if len(idxs) == 0: 
+        mask_win = (
+            (df["TX_TIME_DAYS"] >= day) &
+            (df["TX_TIME_DAYS"] < day + int(window_days)) &
+            (df["CUSTOMER_ID"].isin(compromised)) &
+            mask_month
+        )
+        idxs = df.index[mask_win]
+        if len(idxs) == 0:
             continue
 
-        # Amplifica montos
-        df.loc[idxs, "TX_AMOUNT"] = (df.loc[idxs, "TX_AMOUNT"] * amp_factor).astype("float32")
+        df.loc[idxs, "TX_AMOUNT"] = (df.loc[idxs, "TX_AMOUNT"] * float(amp_factor)).astype("float32")
 
-        # Etiqueta una fracción como fraude
-        k = max(1, int(len(idxs) * frac_to_flip))
-        flip_idxs = rng_day.sample(list(idxs), k=k)
+        nflip = max(1, int(len(idxs) * float(frac_to_flip)))
+        flip_idxs = rng_day.sample(list(idxs), k=nflip)
         df.loc[flip_idxs, "TX_FRAUD"] = 1
         df.loc[flip_idxs, "TX_FRAUD_SCENARIO"] = 3
     return df
@@ -135,26 +196,30 @@ def add_fraud_scenario_3(df, customer_profiles_table, n_customers_per_day=3, win
 
 def apply_fraud_schedule(df, customer_profiles_table, terminal_profiles_table, schedule):
     """
-    schedule: lista de dicts, p.ej.:
-    [
-      {"scenario":1, "start_day":0,   "end_day":59,  "params":{"amount_threshold":220}},
-      {"scenario":2, "start_day":60,  "end_day":119, "params":{"n_per_day":2, "window_days":28}},
-      {"scenario":3, "start_day":120, "end_day":179, "params":{"n_customers_per_day":3, "window_days":14, "amp_factor":5}}
-    ]
+    Aplica una lista de pasos con rango por (año, mes).
+    Cada item: {"scenario": 1|2|3, "start": {"year":..,"month":..}, "end": {...}, "params": {...}}
     """
     out = df.copy()
+    # Asegúrate de tener columnas de destino
+    if "TX_FRAUD" not in out.columns:
+        out["TX_FRAUD"] = 0
+    if "TX_FRAUD_SCENARIO" not in out.columns:
+        out["TX_FRAUD_SCENARIO"] = 0
+
     for step in schedule:
-        sc = step["scenario"]
-        sd = step.get("start_day", None); ed = step.get("end_day", None)
+        sc = int(step["scenario"])
+        start = step.get("start", None)
+        end   = step.get("end", None)
         params = step.get("params", {}) or {}
+
         if sc == 1:
-            out = add_fraud_scenario_1(out, start_day=sd, end_day=ed, **params)
+            out = add_fraud_scenario_1(out, start=start, end=end, **params)
         elif sc == 2:
-            out = add_fraud_scenario_2(out, terminal_profiles_table, start_day=sd, end_day=ed, **params)
+            out = add_fraud_scenario_2(out, terminal_profiles_table, start=start, end=end, **params)
         elif sc == 3:
-            out = add_fraud_scenario_3(out, customer_profiles_table, start_day=sd, end_day=ed, **params)
+            out = add_fraud_scenario_3(out, customer_profiles_table, start=start, end=end, **params)
         else:
-            raise ValueError(f"Escenario desconocido: {sc}")
+            print(f"[WARN] Escenario no reconocido: {sc}")
     return out
 
 
@@ -425,11 +490,22 @@ def generate_and_save(
     print("Columnas:", full.columns.tolist())
     print(full.head())
 
-    transacciones_por_mes = full.groupby('TX_MONTH').size()
+   # transacciones_por_mes = full.groupby('TX_MONTH').size()
     # Mostrar el resultado
-    print("Transacciones por mes:")
-    print(transacciones_por_mes)
+    #print("Transacciones por mes:")
+    #print(transacciones_por_mes)
 
+    print("\nEstructura del DataFrame que se guardará:")
+    print("Columnas:", full.columns.tolist())
+    print(full.head())
+
+    # Mostrar la cantidad de fraudes por día
+    fraudes_por_dia = full[full['TX_FRAUD'] == 1].groupby('TX_MONTH').size()
+    print("\nCantidad de fraudes por día:")
+    print(fraudes_por_dia)
+
+    print("\nCantidad de NO fraudes por día:")
+    print(full[full['TX_FRAUD'] == 0].groupby('TX_MONTH').size())
 
     write_parquet_by_chunks(full, out_base, freq="MS", compression="snappy")
 
