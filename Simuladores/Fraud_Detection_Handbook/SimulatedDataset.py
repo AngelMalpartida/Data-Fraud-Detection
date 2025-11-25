@@ -144,6 +144,7 @@ def add_fraud_scenario_2(df, terminal_profiles_table,
             mask &= mask_month
         df.loc[mask, "TX_FRAUD"] = 1
         df.loc[mask, "TX_FRAUD_SCENARIO"] = 2
+        df.loc[mask, "TX_AMOUNT"] *= 5
     return df
 
 
@@ -417,7 +418,7 @@ def _prepare_for_storage_simple(df):
 
     # columnas a eliminar si existen
     drop_cols = [
-        'TRANSACTION_ID', 'CUSTOMER_ID', 'TERMINAL_ID',
+        'TRANSACTION_ID',
         'TX_DATETIME', 'TX_DATE', 'TX_FRAUD_SCENARIO',
         'available_terminals'
     ]
@@ -425,6 +426,7 @@ def _prepare_for_storage_simple(df):
 
     # columnas a conservar (intersección por seguridad)
     keep_cols = [
+        'CUSTOMER_ID', 'TERMINAL_ID',
         # particionado / tiempo numérico
         'TX_YEAR', 'TX_MONTH', 'TX_DAY', 'TX_TIME_DAYS', 'TX_TIME_SECONDS',
         # variables numéricas principales
@@ -439,6 +441,8 @@ def _prepare_for_storage_simple(df):
 
     # dtypes ligeros
     cast_map = {
+        'CUSTOMER_ID': 'float32',
+        'TERMINAL_ID': 'float32',
         'TX_AMOUNT': 'float32',
         'TX_TIME_DAYS': 'int32',
         'TX_TIME_SECONDS': 'int32',

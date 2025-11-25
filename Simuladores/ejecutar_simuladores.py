@@ -41,14 +41,15 @@ schedule_ym = [
   # ======================
   {"scenario": 1, "start": {"year": 2025, "month": 1}, "end": {"year": 2025, "month": 4},
    "params": {"amount_threshold": 140}},
-  {"scenario": 2, "start": {"year": 2025, "month": 1}, "end": {"year": 2025, "month": 1},
-   "params": {"n_per_day": 4, "window_days": 21}},
-   {"scenario": 2, "start": {"year": 2025, "month": 2}, "end": {"year": 2025, "month": 2},
-   "params": {"n_per_day": 4, "window_days": 21}},
-   {"scenario": 2, "start": {"year": 2025, "month": 3}, "end": {"year": 2025, "month": 3},
-   "params": {"n_per_day": 4, "window_days": 21}},
-   {"scenario": 2, "start": {"year": 2025, "month": 4}, "end": {"year": 2025, "month": 4},
-   "params": {"n_per_day": 4, "window_days": 21}},
+
+  {"scenario": 2, "start": {"year": 2025, "month": 1}, "end": {"year": 2025, "month": 4},
+   "params": {"n_per_day": 4, "window_days": 60}},
+   #{"scenario": 2, "start": {"year": 2025, "month": 2}, "end": {"year": 2025, "month": 2},
+   #"params": {"n_per_day": 4, "window_days": 28}},
+   #{"scenario": 2, "start": {"year": 2025, "month": 3}, "end": {"year": 2025, "month": 4},
+   #"params": {"n_per_day": 4, "window_days": 60}},
+   #{"scenario": 2, "start": {"year": 2025, "month": 4}, "end": {"year": 2025, "month": 4},
+  # "params": {"n_per_day": 4, "window_days": 28}},
 
 
   # ======================
@@ -57,60 +58,63 @@ schedule_ym = [
 
   # Bloque 1 (May–Jun 2025): S1
   {"scenario": 1, "start": {"year": 2025, "month": 5}, "end": {"year": 2025, "month": 6},
-   "params": {"amount_threshold": 130}},
+   "params": {"amount_threshold": 120}},
 
   # Bloque 2 (Jul–Ago 2025): S2
-  {"scenario": 2, "start": {"year": 2025, "month": 7}, "end": {"year": 2025, "month": 7},
-   "params": {"n_per_day": 4, "window_days": 21}},
+  {"scenario": 2, "start": {"year": 2025, "month": 7}, "end": {"year": 2025, "month": 8},
+   "params": {"n_per_day": 4, "window_days": 62}},
 
   # Bloque 2 (Jul–Ago 2025): S2
-  {"scenario": 2, "start": {"year": 2025, "month": 8}, "end": {"year": 2025, "month": 8},
-   "params": {"n_per_day": 4, "window_days": 21}},
+  #{"scenario": 2, "start": {"year": 2025, "month": 8}, "end": {"year": 2025, "month": 8},
+  # "params": {"n_per_day": 4, "window_days": 28}},
 
   # Bloque 3 (Sep 2025): S3 (más suave)
-  {"scenario": 3, "start": {"year": 2025, "month": 9}, "end": {"year": 2025, "month": 9},
-   "params": {"n_customers_per_day": 15, "window_days": 30, "amp_factor": 6, "frac_to_flip": 1/3}},
+  {"scenario": 3, "start": {"year": 2025, "month": 9}, "end": {"year": 2025, "month": 10},
+   "params": {"n_customers_per_day": 15, "window_days": 60, "amp_factor": 6, "frac_to_flip": 1/2}},
   # Bloque 3 (Oct 2025): S3 (más intenso)
-  {"scenario": 3, "start": {"year": 2025, "month": 10}, "end": {"year": 2025, "month": 10},
-   "params": {"n_customers_per_day": 15, "window_days": 30, "amp_factor": 6, "frac_to_flip": 1/3}},
+  #{"scenario": 3, "start": {"year": 2025, "month": 10}, "end": {"year": 2025, "month": 10},
+  # "params": {"n_customers_per_day": 15, "window_days": 30, "amp_factor": 6, "frac_to_flip": 1/2}},
 
   # Bloque 4 (Nov–Dic 2025, NAVIDAD): S1 “suavizado”
-  {"scenario": 1, "start": {"year": 2025, "month": 11}, "end": {"year": 2025, "month": 11},
+  {"scenario": 1, "start": {"year": 2025, "month": 11}, "end": {"year": 2025, "month": 12},
    "params": {"amount_threshold": 150}},
-  {"scenario": 1, "start": {"year": 2025, "month": 12}, "end": {"year": 2025, "month": 12},
-   "params": {"amount_threshold": 180}},
+ # {"scenario": 1, "start": {"year": 2025, "month": 12}, "end": {"year": 2025, "month": 12},
+   #"params": {"amount_threshold": 180}},
 
   # Bloque 5 (Ene–Feb 2026): S2
   {"scenario": 2, "start": {"year": 2026, "month": 1}, "end": {"year": 2026, "month": 2},
-   "params": {"n_per_day": 4, "window_days": 21}},
+   "params": {"n_per_day": 4, "window_days": 59}},
+
+   #{"scenario": 2, "start": {"year": 2026, "month": 2}, "end": {"year": 2026, "month": 2},
+  # "params": {"n_per_day": 4, "window_days": 28}},
 
   # Bloque 6 (Mar–Abr 2026): S3
   {"scenario": 3, "start": {"year": 2026, "month": 3}, "end": {"year": 2026, "month": 4},
-   "params": {"n_customers_per_day": 4, "window_days": 14, "amp_factor": 5, "frac_to_flip": 1/3}},
+   "params": {"n_customers_per_day": 10, "window_days": 30, "amp_factor": 6, "frac_to_flip": 1/2}},
 
   # Bloque 7 (May–Jun 2026): S1
   {"scenario": 1, "start": {"year": 2026, "month": 5}, "end": {"year": 2026, "month": 6},
-   "params": {"amount_threshold": 130}},
+   "params": {"amount_threshold": 120}},
 
   # Bloque 8 (Jul–Ago 2026): S2
-  {"scenario": 2, "start": {"year": 2026, "month": 7}, "end": {"year": 2026, "month": 7},
-   "params": {"n_per_day": 4, "window_days": 28}},
+  {"scenario": 2, "start": {"year": 2026, "month": 7}, "end": {"year": 2026, "month": 8},
+   "params": {"n_per_day": 4, "window_days": 62}},
    # Bloque 8 (Jul–Ago 2026): S2
-  {"scenario": 2, "start": {"year": 2026, "month": 8}, "end": {"year": 2026, "month": 8},
-   "params": {"n_per_day": 4, "window_days": 28}},
+ # {"scenario": 2, "start": {"year": 2026, "month": 8}, "end": {"year": 2026, "month": 8},
+  # "params": {"n_per_day": 4, "window_days": 28}},
 
   # Bloque 9 (Sep–Oct 2026): S3
-  {"scenario": 3, "start": {"year": 2026, "month": 9}, "end": {"year": 2026, "month": 9},
-   "params": {"n_customers_per_day": 15, "window_days": 30, "amp_factor": 6, "frac_to_flip": 1/3}},
+  {"scenario": 3, "start": {"year": 2026, "month": 9}, "end": {"year": 2026, "month": 10},
+   "params": {"n_customers_per_day": 15, "window_days": 60, "amp_factor": 6, "frac_to_flip": 1/2}},
   # Bloque 9 (Oct 2026): S3 (más intenso)
-  {"scenario": 3, "start": {"year": 2026, "month": 10}, "end": {"year": 2026, "month": 10},
-   "params": {"n_customers_per_day": 15, "window_days": 30, "amp_factor": 6, "frac_to_flip": 1/3}},
+  #{"scenario": 3, "start": {"year": 2026, "month": 10}, "end": {"year": 2026, "month": 10},
+  # "params": {"n_customers_per_day": 15, "window_days": 30, "amp_factor": 6, "frac_to_flip": 1/2}},
 
   # Bloque 10 (Nov–Dic 2026, NAVIDAD): S1 “suavizado”
-  {"scenario": 1, "start": {"year": 2026, "month": 11}, "end": {"year": 2026, "month": 11},
+  {"scenario": 1, "start": {"year": 2026, "month": 11}, "end": {"year": 2026, "month": 12},
    "params": {"amount_threshold": 150}},
-  {"scenario": 1, "start": {"year": 2026, "month": 12}, "end": {"year": 2026, "month": 12},
-   "params": {"amount_threshold": 180}},   # puedes subir a 180 en dic si quieres aún más “suavizado”
+ # {"scenario": 1, "start": {"year": 2026, "month": 12}, "end": {"year": 2026, "month": 12},
+  # "params": {"amount_threshold": 180}},   # puedes subir a 180 en dic si quieres aún más “suavizado”
 ]
 
 
